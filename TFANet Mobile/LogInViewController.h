@@ -12,5 +12,5 @@
 
 @property (nonatomic) bool loggedIn;
 @property (nonatomic, retain) IBOutlet UILabel *status;
-     
+        
 @end
