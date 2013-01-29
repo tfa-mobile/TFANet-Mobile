@@ -40,6 +40,10 @@ TFANetAppAppDelegate *global;
             LogInViewController *liv = [self.storyboard instantiateViewControllerWithIdentifier:@"loginView"];
             liv.status.text = [NSString stringWithFormat:@"Login: %@", [body valueForKey:@"status"]];
             [self.navigationController pushViewController:liv animated:YES];
+            [global getAllGroupsWithCompletionBlock:^(NSDictionary *results) {
+                //break
+                NSLog(@"gotten data");
+            }];
         }
     }];
 }

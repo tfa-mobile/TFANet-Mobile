@@ -15,11 +15,11 @@
 {
     // Override point for customization after application launch.
 
-    NSMutableDictionary *headerFields = [NSMutableDictionary dictionary];
-    [headerFields setValue:@"V4kd5k8v88vsbn56RiCWXpLBwsmUbXcPIzfaQXGPRwYHpkH6rok3qCc3C16ogOagiy5xV9XCT/eeBf+NzcyPVmEBhVNlpA1mKJoeGSkBYdaRZr1xD4VBB0ilWtH2nrBuiB8/Y4VCcxmodjx57UANGVrxM5F0ZGntBWP2Rug7wnbuEc5e8kts9K4h0/ViSIn/zCmvV1ZaZd887pzQbIyhXDm0lels0G8D9rpfZ/TmkDuMBME7jPmE3LBHQgu1k3IYeAZRtOsq2h/k4MYU7aYPXFoVBwHW63Jxo8G+koueTPcf0MHXlSa48ZbkZtm7G4sZaF/xaKtfbxPWjPPImCAQD+Limbgj/tD8R0aqK3RYbOZKSuW+HCetHSl9CEP39/mOgmiLJIgzDJveFj49rgMpqF8k4wxD/m1h8UhmY3qqXP0uZUVz+z/NsH0OBeMrRAgpsQIH0YQBxQMN54lMyyxONM2Gz5OExkYzLR7DTOpjmmvwsgQH4zowq2VUJZTlrUhn7qjeeKAEgzvd/nhs3Yhc5PuXpxjfWxYcOKXTTVwEXOl3svji0j3dMxTGFb3KhZX898V5vSyxsViHhAMuT5zY0ghY4tJhSsVKYzGoaEufULmLMVcDsWYppQ6UR+pTaH2CC8SEvHCkot9lc96DrDmxF5pYrDIw/whxjjQJk+9py2c=" forKey:@"LtpaToken2"];
-     [headerFields setValue:@"MHKVPiHbXf5sWS1JFvKkFv/9qzQ9m4YXcXaVra+I3T24DnVp/FBtBB2OOB2nLFQQbbUise2ouOjmz16jcBbRswv4Tggj30QnIDkPeez1QTXV9IAxE/PuRx87/hJxgCDb9tebpEKhHFPeMIbwgRJTOrTS7ZG42atge0tVEHGk8HzU+S5Cl2V0TaWHndO5RdmbrG5kO86xcLy8YkmKxo4xHZMv2jvH3y8ELKM1xrWA30g2O7LmkYbPplH7cwt+SVdxoDyhupt0s8Tcwa7m7UwT8whCG4B++d+9GpMXrd72/8KDEuRYok3V3bSVsN+OQPj6iHRs1YNceF7KPDPhtpQiow==" forKey:@"LtpaToken"];
-    [headerFields setValue:@"http://dev.tfanet.org/mobileauth/login.jsp" forKey:@"Referer"];
-    self.authEngine = [[TFANetEngine alloc] initWithHostName:@"dev.tfanet.org" customHeaderFields:headerFields];
+//    NSMutableDictionary *headerFields = [NSMutableDictionary dictionary];
+//    [headerFields setValue:@"V4kd5k8v88vsbn56RiCWXpLBwsmUbXcPIzfaQXGPRwYHpkH6rok3qCc3C16ogOagiy5xV9XCT/eeBf+NzcyPVmEBhVNlpA1mKJoeGSkBYdaRZr1xD4VBB0ilWtH2nrBuiB8/Y4VCcxmodjx57UANGVrxM5F0ZGntBWP2Rug7wnbuEc5e8kts9K4h0/ViSIn/zCmvV1ZaZd887pzQbIyhXDm0lels0G8D9rpfZ/TmkDuMBME7jPmE3LBHQgu1k3IYeAZRtOsq2h/k4MYU7aYPXFoVBwHW63Jxo8G+koueTPcf0MHXlSa48ZbkZtm7G4sZaF/xaKtfbxPWjPPImCAQD+Limbgj/tD8R0aqK3RYbOZKSuW+HCetHSl9CEP39/mOgmiLJIgzDJveFj49rgMpqF8k4wxD/m1h8UhmY3qqXP0uZUVz+z/NsH0OBeMrRAgpsQIH0YQBxQMN54lMyyxONM2Gz5OExkYzLR7DTOpjmmvwsgQH4zowq2VUJZTlrUhn7qjeeKAEgzvd/nhs3Yhc5PuXpxjfWxYcOKXTTVwEXOl3svji0j3dMxTGFb3KhZX898V5vSyxsViHhAMuT5zY0ghY4tJhSsVKYzGoaEufULmLMVcDsWYppQ6UR+pTaH2CC8SEvHCkot9lc96DrDmxF5pYrDIw/whxjjQJk+9py2c=" forKey:@"LtpaToken2"];
+//     [headerFields setValue:@"MHKVPiHbXf5sWS1JFvKkFv/9qzQ9m4YXcXaVra+I3T24DnVp/FBtBB2OOB2nLFQQbbUise2ouOjmz16jcBbRswv4Tggj30QnIDkPeez1QTXV9IAxE/PuRx87/hJxgCDb9tebpEKhHFPeMIbwgRJTOrTS7ZG42atge0tVEHGk8HzU+S5Cl2V0TaWHndO5RdmbrG5kO86xcLy8YkmKxo4xHZMv2jvH3y8ELKM1xrWA30g2O7LmkYbPplH7cwt+SVdxoDyhupt0s8Tcwa7m7UwT8whCG4B++d+9GpMXrd72/8KDEuRYok3V3bSVsN+OQPj6iHRs1YNceF7KPDPhtpQiow==" forKey:@"LtpaToken"];
+//    [headerFields setValue:@"http://dev.tfanet.org/mobileauth/login.jsp" forKey:@"Referer"];
+    self.authEngine = [[TFANetEngine alloc] initWithHostName:@"dev.tfanet.org"];
     
     return YES;
 }
@@ -52,7 +52,22 @@
 }
 
 
-
+-(void) getAllGroupsWithCompletionBlock:(TFANetResponseBlock)callback {
+    [self.authEngine bodyForPath:@"lcapi/community/communities?ps=10&page=1&sortby=1&orderby=1&tag=&search=Search+for+a+Group&include=all" verb:@"GET" body:nil isCacheable:FALSE onCompletion:^(NSDictionary *body) {
+        if([body count] >0){
+            
+            callback(body);
+        }else{
+            NSLog(@"Empty body:");
+        }
+    }  onError:^(NSError *error){
+        NSLog(@"error: %@",error);
+        
+    }];
+    
+    
+    // /lcapi/community/communities?ps=10&page=1&sortby=1&orderby=1&tag=&search=Search+for+a+Group&include=all
+}
 
 
 
