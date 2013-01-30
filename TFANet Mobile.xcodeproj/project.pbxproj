@@ -23,6 +23,7 @@
 		AD13C59416B8584100B5CF5C /* GroupCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AD13C59016B8584100B5CF5C /* GroupCell.m */; };
 		AD13C59516B8584100B5CF5C /* GroupDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD13C59116B8584100B5CF5C /* GroupDetailViewController.m */; };
 		AD13C60A16B8775B00B5CF5C /* Group.m in Sources */ = {isa = PBXBuildFile; fileRef = AD13C60916B8775B00B5CF5C /* Group.m */; };
+		AD13C63216B88CE800B5CF5C /* GroupCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD13C63116B88CE800B5CF5C /* GroupCellView.xib */; };
 		ADE062431680F9A400A0F7BF /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADE062421680F9A400A0F7BF /* CFNetwork.framework */; };
 		ADE062451680F9A900A0F7BF /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADE062441680F9A900A0F7BF /* Security.framework */; };
 		ADE062471680F9B900A0F7BF /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADE062461680F9B900A0F7BF /* SystemConfiguration.framework */; };
@@ -74,6 +75,7 @@
 		AD13C59216B8584100B5CF5C /* GroupTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GroupTestViewController.h; path = "TFANet Mobile/GroupTestViewController.h"; sourceTree = "<group>"; };
 		AD13C60816B8775B00B5CF5C /* Group.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Group.h; sourceTree = "<group>"; };
 		AD13C60916B8775B00B5CF5C /* Group.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Group.m; sourceTree = "<group>"; };
+		AD13C63116B88CE800B5CF5C /* GroupCellView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = GroupCellView.xib; path = "TFANet Mobile/GroupCellView.xib"; sourceTree = "<group>"; };
 		ADE062421680F9A400A0F7BF /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		ADE062441680F9A900A0F7BF /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		ADE062461680F9B900A0F7BF /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
@@ -177,6 +179,7 @@
 				AD13C59016B8584100B5CF5C /* GroupCell.m */,
 				AD13C59216B8584100B5CF5C /* GroupTestViewController.h */,
 				AD13C58D16B8584100B5CF5C /* GroupTestViewController.m */,
+				AD13C63116B88CE800B5CF5C /* GroupCellView.xib */,
 			);
 			name = "Group UI";
 			path = ..;
@@ -265,6 +268,7 @@
 				99B5FF541671235F00AE6179 /* Default-568h@2x.png in Resources */,
 				99B5FF571671235F00AE6179 /* MainStoryboard.storyboard in Resources */,
 				99B5FF61167124B100AE6179 /* banner_tfanet.png in Resources */,
+				AD13C63216B88CE800B5CF5C /* GroupCellView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

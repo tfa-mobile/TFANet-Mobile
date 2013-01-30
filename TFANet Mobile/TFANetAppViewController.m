@@ -36,7 +36,7 @@ TFANetAppAppDelegate *global;
     _serverResponse.text = @"Hello!";
     [global loginTFANet:_username.text with:_password.text];
     [global checkAuthorizationWithCompletionBlock:^(NSDictionary *body) {
-        if([body valueForKey:@"status"]){
+        if([body valueForKey:@"status"]==@"success"){
             LogInViewController *liv = [self.storyboard instantiateViewControllerWithIdentifier:@"loginView"];
             liv.status.text = [NSString stringWithFormat:@"Login: %@", [body valueForKey:@"status"]];
             [self.navigationController pushViewController:liv animated:YES];
@@ -44,6 +44,10 @@ TFANetAppAppDelegate *global;
                 //break
                 NSLog(@"gotten data");
             }];
+        }
+        else{
+            NSLog(@"Incorrect Login Information. Try again.");
+        
         }
     }];
 }

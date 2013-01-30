@@ -12,7 +12,7 @@
 
 @property (nonatomic, retain) NSString * handle;
 @property (nonatomic, retain) NSString * ID;
-@property (nonatomic, retain) UIImage * icon;
+@property (nonatomic, retain) NSString * icon;
 @property (nonatomic, retain) NSString * summary;
 @property (nonatomic, retain) NSString * membercount;
 @property (nonatomic, retain) NSString * updated;

@@ -31,7 +31,6 @@
         // do your processing here
         NSDictionary *json = [NSJSONSerialization JSONObjectWithData:completedOperation.responseData options:0 error:&error];
         completionBlock(json);
-       // completionBlock([completedOperation responseString]);
     
     }errorHandler:^(MKNetworkOperation *completedOperation, NSError *error) {
               errorBlock(error);

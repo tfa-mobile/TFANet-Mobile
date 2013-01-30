@@ -17,10 +17,7 @@
     
     group.handle = [dict objectForKey:@"handle"];
     group.ID = [dict objectForKey:@"id"];
-    group.icon = [[UIImage alloc] initWithData:
-                  [NSData dataWithContentsOfURL:
-                   [NSURL URLWithString:
-                    [dict objectForKey:@"icon"]]]];
+    group.icon = [dict objectForKey:@"icon"];
     group.summary = [dict objectForKey:@"summary"];
     group.membercount = [dict objectForKey:@"membercount"];
     group.updated = [dict objectForKey:@"updated"];

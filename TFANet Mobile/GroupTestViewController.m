@@ -29,23 +29,13 @@
 {
     [super viewDidLoad];
     
-	// Do any additional setup after loading the view, typically from a nib.
-   
-   // NSString *dataPath = [[NSBundle mainBundle] pathForResource:@"test_groups" ofType:@"json"];
-   // NSError *error;
-    
-    //NSData *content = [[NSData alloc] initWithContentsOfFile:dataPath];
-    //NSDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:fileContent options:kNilOptions error:&error];
-    
-    //NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:jsonData options:0 error:&error];
-    //NSLog(@"########### %@", [dict objectForKey:@"entry"]);
-    global = [[UIApplication sharedApplication]delegate];
+	global = [[UIApplication sharedApplication]delegate];
     self.groupList = [[NSMutableArray alloc] init];
+    NSString *myIdentifier = @"GroupCell";
+    [self.groupTableView registerNib:[UINib nibWithNibName:@"GroupCellView" bundle:nil] forCellReuseIdentifier:myIdentifier];
+
     [self parseJSON];
-   
-    groups = [NSArray arrayWithObjects:@"Group 1", @"Group 2", @"Group 3", @"Group 4", @"Group 5", @"Group 6", @"Group 7", @"Group 8", @"Group 9", @"Group 10",@"Group 7", @"Group 8", @"Group 9", @"Group 10", nil];
-    
-    
+       
 }
 
 -(void) parseJSON{
@@ -90,9 +80,15 @@
         Group *current = [groupList objectAtIndex:indexPath.row];
         cell.groupTitle.text = [current handle];
         cell.groupSummary.text = [current summary];
-        cell.icon = [[UIImageView alloc] initWithImage:current.icon];
+        cell.icon.image = [[UIImage alloc] initWithData:
+                           [NSData dataWithContentsOfURL:
+                            [NSURL URLWithString: current.icon]]];
         cell.membercount.text = [current membercount];
         cell.updated.text = [current updated];
+    }
+    if(indexPath.row == [groupList count]){
+        //need to reload data
+    
     }
     return cell;
 }
@@ -139,6 +135,5 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
 
 @end
