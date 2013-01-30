@@ -45,10 +45,6 @@ TFANetAppAppDelegate *global;
             [global storePrefs: _username.text with:_password.text];
             LogInViewController *liv = [self.storyboard instantiateViewControllerWithIdentifier:@"loginView"];
             [self.navigationController pushViewController:liv animated:YES];
-            [global getAllGroupsWithCompletionBlock:^(NSDictionary *results) {
-                //break
-                NSLog(@"gotten data");
-            }];
         }
         else{
             NSLog(@"Incorrect Login Information. Try again.");

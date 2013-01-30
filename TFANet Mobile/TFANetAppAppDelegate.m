@@ -85,8 +85,6 @@ NSUserDefaults *prefs;
         
     }];
     
-    
-    // /lcapi/community/communities?ps=10&page=1&sortby=1&orderby=1&tag=&search=Search+for+a+Group&include=all
 }
 
 -(void) getMyGroupsWithCompletionBlock:(TFANetResponseBlock)callback {
@@ -102,14 +100,12 @@ NSUserDefaults *prefs;
         
     }];
     
-    
-    // /lcapi/community/communities?ps=10&page=1&sortby=1&orderby=1&tag=&search=Search+for+a+Group&include=all
 }
 
--(void) getMoreGroupsWithCompletionBlock:(TFANetResponseBlock)callback for:(NSString*) page andSize:(NSString*)step{
+-(void) getMoreGroupsWithCompletionBlock:(TFANetResponseBlock)callback for:(NSNumber*) page andSize:(NSNumber*)step{
     NSMutableDictionary *params = [[NSMutableDictionary alloc] init];
-    [params setValue: page forKey:@"page"];
-    [params setValue: step forKey:@"ps"];
+    [params setValue: page.stringValue forKey:@"page"];
+    [params setValue: step.stringValue forKey:@"ps"];
     [params setValue: @"1" forKey:@"sortby"];
     [params setValue: @"1" forKey:@"orderby"];
     [params setValue: @"" forKey:@"tag"];

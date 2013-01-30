@@ -23,7 +23,7 @@
     
 }
 
-@synthesize groupTableView, groupList, start, step;
+@synthesize groupTableView, groupList, start, step, totalResults;
 
 - (void)viewDidLoad
 {
@@ -55,10 +55,13 @@
 
 }
 -(void) addToDataSource{
-
+    start = [NSNumber numberWithInt:start.intValue + 1];
+    
+    if(!totalResults.intValue < (step.intValue * start.intValue)){
     [global getMoreGroupsWithCompletionBlock:^(NSDictionary *results) {
        [self parseJSON:results];
-    } for:start andSize:step];
+    } for: start andSize:step];
+    }
 
 
 
@@ -68,8 +71,9 @@
     NSLog(@"result keys: %@", results.allKeys);
     NSDictionary* feed = [results objectForKey:@"feed"];
     NSLog(@"keys in entry: %@", feed.allKeys);
-    start = (NSString*)[feed objectForKey:@"startIndex"];
-    step =  (NSString*)[feed objectForKey:@"itemsPerPage"];
+    start = (NSNumber*)[feed objectForKey:@"startIndex"];
+    step =  (NSNumber*)[feed objectForKey:@"itemsPerPage"];
+    totalResults = (NSNumber*)[feed objectForKey:@"totalResults"];
     NSArray* feedArray = [feed objectForKey:@"entry"];
    
     for (NSDictionary *dic in feedArray) {
@@ -104,7 +108,7 @@
     }
     if(indexPath.row == [groupList count]-1){
         //need to reload data
-      //  [self addToDataSource];
+        [self addToDataSource];
     }
     return cell;
 }

@@ -95,8 +95,8 @@
 		AD13C59016B8584100B5CF5C /* GroupCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GroupCell.m; path = "TFANet Mobile/GroupCell.m"; sourceTree = "<group>"; };
 		AD13C59116B8584100B5CF5C /* GroupDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GroupDetailViewController.m; path = "TFANet Mobile/GroupDetailViewController.m"; sourceTree = "<group>"; };
 		AD13C59216B8584100B5CF5C /* MyGroupsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyGroupsViewController.h; path = "TFANet Mobile/MyGroupsViewController.h"; sourceTree = "<group>"; };
-		AD13C60816B8775B00B5CF5C /* Group.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Group.h; sourceTree = "<group>"; };
-		AD13C60916B8775B00B5CF5C /* Group.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Group.m; sourceTree = "<group>"; };
+		AD13C60816B8775B00B5CF5C /* Group.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Group.h; path = "TFANet Mobile/Group.h"; sourceTree = "<group>"; };
+		AD13C60916B8775B00B5CF5C /* Group.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Group.m; path = "TFANet Mobile/Group.m"; sourceTree = "<group>"; };
 		AD13C63116B88CE800B5CF5C /* GroupCellView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = GroupCellView.xib; path = "TFANet Mobile/GroupCellView.xib"; sourceTree = "<group>"; };
 		AD13C6BA16B979C500B5CF5C /* loginbg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = loginbg.png; path = "TFANet Mobile/loginbg.png"; sourceTree = "<group>"; };
 		AD13C6BD16B97F3700B5CF5C /* login_hoverbtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = login_hoverbtn.png; path = "TFANet Mobile/login_hoverbtn.png"; sourceTree = "<group>"; };
@@ -140,7 +140,6 @@
 		99B5FF2E1671235F00AE6179 = {
 			isa = PBXGroup;
 			children = (
-				AD13C6BC16B979CC00B5CF5C /* images */,
 				ADE0628C1680FEFB00A0F7BF /* MKNetworkKit-iOS.xcodeproj */,
 				99B5FF431671235F00AE6179 /* TFANet Mobile */,
 				99B5FF3C1671235F00AE6179 /* Frameworks */,
@@ -172,11 +171,10 @@
 		99B5FF431671235F00AE6179 /* TFANet Mobile */ = {
 			isa = PBXGroup;
 			children = (
+				AD13C6BC16B979CC00B5CF5C /* images */,
 				AD13C59616B8584800B5CF5C /* Group UI */,
 				ADE06298168101EC00A0F7BF /* TFANetEngine.h */,
 				ADE06299168101EC00A0F7BF /* TFANetEngine.m */,
-				AD13C60816B8775B00B5CF5C /* Group.h */,
-				AD13C60916B8775B00B5CF5C /* Group.m */,
 				99B5FF4C1671235F00AE6179 /* TFANetAppAppDelegate.h */,
 				99B5FF4D1671235F00AE6179 /* TFANetAppAppDelegate.m */,
 				99B5FF551671235F00AE6179 /* MainStoryboard.storyboard */,
@@ -207,6 +205,8 @@
 		AD13C59616B8584800B5CF5C /* Group UI */ = {
 			isa = PBXGroup;
 			children = (
+				AD13C60816B8775B00B5CF5C /* Group.h */,
+				AD13C60916B8775B00B5CF5C /* Group.m */,
 				2643FED616B9D62C00459864 /* GroupSearchViewController.h */,
 				2643FED716B9D62C00459864 /* GroupSearchViewController.m */,
 				AD13C58E16B8584100B5CF5C /* GroupDetailViewController.h */,
@@ -241,6 +241,7 @@
 				AD13C6BA16B979C500B5CF5C /* loginbg.png */,
 			);
 			name = images;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		ADE0628D1680FEFB00A0F7BF /* Products */ = {

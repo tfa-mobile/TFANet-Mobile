@@ -241,42 +241,46 @@
                         <rect key="frame" x="0.0" y="20" width="768" height="1004"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="singleLineEtched" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="2lb-XM-FTy">
-                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="768" id="U8f-hg-mlJ"/>
-                                </constraints>
-                                <searchBar key="tableHeaderView" contentMode="redraw" id="hp9-7I-wDX">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" allowsSelection="NO" rowHeight="140" sectionHeaderHeight="10" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="qL6-54-Vy5">
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <searchBar key="tableHeaderView" contentMode="redraw" id="2rD-AH-lXl">
                                     <rect key="frame" x="0.0" y="0.0" width="768" height="44"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                     <textInputTraits key="textInputTraits"/>
                                     <connections>
-                                        <outlet property="delegate" destination="h0D-LP-24J" id="MRe-mW-Ylg"/>
+                                        <outlet property="delegate" destination="3Ub-eu-qom" id="Aku-Ko-0Xg"/>
                                     </connections>
                                 </searchBar>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" shouldIndentWhileEditing="NO" rowHeight="138" id="JLI-4j-gR9" customClass="GroupCell">
-                                        <rect key="frame" x="0.0" y="78" width="768" height="140"/>
-                                        <autoresizingMask key="autoresizingMask"/>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" shouldIndentWhileEditing="NO" reuseIdentifier="GroupCell" rowHeight="138" id="llD-V4-666" customClass="GroupCell">
+                                        <rect key="frame" x="0.0" y="78" width="768" height="139"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="45" y="1" width="658" height="137"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
+                                        <color key="backgroundColor" red="0.99607849120000003" green="0.2117647231" blue="0.0039215688589999999" alpha="1" colorSpace="deviceRGB"/>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="3Ub-eu-qom" id="LTu-Ki-l2X"/>
+                                    <outlet property="delegate" destination="3Ub-eu-qom" id="Oay-15-IeI"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="2lb-XM-FTy" firstAttribute="leading" secondItem="nD9-Fc-2Eu" secondAttribute="leading" constant="-8" id="4BN-8Y-7jp"/>
-                            <constraint firstItem="2lb-XM-FTy" firstAttribute="top" secondItem="nD9-Fc-2Eu" secondAttribute="top" type="default" id="Xte-hI-cRv"/>
-                            <constraint firstItem="2lb-XM-FTy" firstAttribute="bottom" secondItem="nD9-Fc-2Eu" secondAttribute="bottom" type="default" id="pff-qF-AOH"/>
+                            <constraint firstItem="qL6-54-Vy5" firstAttribute="trailing" secondItem="nD9-Fc-2Eu" secondAttribute="trailing" type="default" id="4YW-FD-SpD"/>
+                            <constraint firstItem="qL6-54-Vy5" firstAttribute="bottom" secondItem="nD9-Fc-2Eu" secondAttribute="bottom" type="default" id="5kq-Ma-K18"/>
+                            <constraint firstItem="qL6-54-Vy5" firstAttribute="top" secondItem="nD9-Fc-2Eu" secondAttribute="top" type="default" id="akf-jL-BfF"/>
+                            <constraint firstItem="qL6-54-Vy5" firstAttribute="leading" secondItem="nD9-Fc-2Eu" secondAttribute="leading" type="default" id="iWh-le-OCr"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="zhe-VV-JqB"/>
                     <connections>
-                        <outlet property="groupTableView" destination="2lb-XM-FTy" id="e4A-6c-51m"/>
+                        <outlet property="groupTableView" destination="qL6-54-Vy5" id="EcC-JW-NXg"/>
                         <outlet property="searchDisplayController" destination="igD-Gu-mIw" id="Fiv-rx-dwu"/>
                     </connections>
                 </viewController>
@@ -284,7 +288,6 @@
                 <searchDisplayController id="igD-Gu-mIw">
                     <connections>
                         <outlet property="delegate" destination="h0D-LP-24J" id="TBE-yY-AUe"/>
-                        <outlet property="searchBar" destination="hp9-7I-wDX" id="b7v-WD-IHc"/>
                         <outlet property="searchContentsController" destination="h0D-LP-24J" id="rTx-SL-ybd"/>
                         <outlet property="searchResultsDataSource" destination="h0D-LP-24J" id="s2c-Bv-XT6"/>
                         <outlet property="searchResultsDelegate" destination="h0D-LP-24J" id="MHP-Oj-u0i"/>
@@ -461,6 +464,57 @@
         <image name="profile.png" width="1032" height="617"/>
         <image name="region_btn.png" width="1032" height="314"/>
     </resources>
+    <classes>
+        <class className="GroupCell" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/GroupCell.h"/>
+            <relationships>
+                <relationship kind="outlet" name="groupID" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="groupSummary" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="groupTitle" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="icon" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="membercount" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="updated" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="GroupDetailViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/GroupDetailViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="groupLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="GroupSearchViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/GroupSearchViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="groupTableView" candidateClass="UITableView"/>
+            </relationships>
+        </class>
+        <class className="LogInViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/LogInViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="openBlogs:"/>
+                <relationship kind="action" name="openComingSoon:"/>
+                <relationship kind="action" name="openGroups:"/>
+                <relationship kind="action" name="openMyGroups:"/>
+            </relationships>
+        </class>
+        <class className="MyGroupsViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MyGroupsViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="groupTableView" candidateClass="UITableView"/>
+            </relationships>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="TFANetAppViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/TFANetAppViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="doLogin:"/>
+                <relationship kind="outlet" name="_password" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="_username" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackTranslucent"/>
         <simulatedOrientationMetrics key="orientation"/>

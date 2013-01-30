@@ -22,7 +22,7 @@ typedef void (^TFANetResponseBlock)(NSDictionary*);
 -(void) checkAuthorizationWithCompletionBlock:(TFANetResponseBlock) callback;
 -(void) getAllGroupsWithCompletionBlock:(TFANetResponseBlock)callback;
 -(void) getMyGroupsWithCompletionBlock:(TFANetResponseBlock)callback;
--(void) getMoreGroupsWithCompletionBlock:(TFANetResponseBlock)callback for:(NSString*) page andSize:(NSString*)step;
+-(void) getMoreGroupsWithCompletionBlock:(TFANetResponseBlock)callback for:(NSNumber *) page andSize:(NSNumber*)step;
 -(bool) prefsSaved;
 -(NSString *)loadUsername;
 -(NSString *) loadPassword;
