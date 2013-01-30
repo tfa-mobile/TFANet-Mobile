@@ -72,14 +72,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
-    if (tableView == self.searchDisplayController.searchResultsTableView) {
-        return [searchResults count];
-        
-    } else {
-        return [self.groupList count];
-        
-    }
+{        return [self.groupList count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -97,12 +90,12 @@
         cell.icon.image = [[UIImage alloc] initWithData:
                            [NSData dataWithContentsOfURL:
                             [NSURL URLWithString: current.icon]]];
-        cell.membercount.text = [current membercount];
-        cell.updated.text = [current updated];
+        cell.membercount.text = [NSString stringWithFormat:@"(%@) Members",[current membercount]];
+        cell.updated.text = [NSString stringWithFormat:@"Updated: %@",[current updated]];
     }
-    if(indexPath.row == [groupList count]){
+    if(indexPath.row == [groupList count]-1){
         //need to reload data
-        [self addToDataSource];
+      //  [self addToDataSource];
     }
     return cell;
 }
