@@ -8,15 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LogInViewController : UIViewController<UITableViewDelegate, UITableViewDataSource>
+@interface LogInViewController : UIViewController
 
 @property (nonatomic) bool loggedIn;
-@property (nonatomic, retain) IBOutlet UILabel *status;
-@property (nonatomic, retain) IBOutlet UITableView *menu;
 
-
--(void)openGroups:(id)sender;
--(void)openMyGroups:(id)sender;
--(void)openBlogs:(id)sender;
-
+-(IBAction)openGroups:(id)sender;
+-(IBAction)openMyGroups:(id)sender;
+-(IBAction)openBlogs:(id)sender;
+-(IBAction)openComingSoon:(id)sender;
 @end

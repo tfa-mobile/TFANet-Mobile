@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2844" systemVersion="12C3012" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="Gbo-aT-QoW">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2844" systemVersion="12C2034" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="Gbo-aT-QoW">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1930"/>
     </dependencies>
@@ -91,71 +91,144 @@
                         <rect key="frame" x="0.0" y="20" width="768" height="1004"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Welcome to myTFANet!!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bH2-aC-fHQ">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="menu.png" translatesAutoresizingMaskIntoConstraints="NO" id="GEG-bs-lNv">
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="434" id="Qd8-2b-dUF"/>
-                                    <constraint firstAttribute="height" constant="75" id="ltR-rT-qy9"/>
+                                    <constraint firstAttribute="height" constant="964" id="XIS-T5-Lc6"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="37"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AKm-jQ-MMV">
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eNm-tX-DfC">
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="8gK-2w-7Uk"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="296" type="user" id="3EH-jw-wjo"/>
+                                    <constraint firstAttribute="height" constant="268" id="VCU-lY-swW"/>
+                                    <constraint firstAttribute="width" constant="509" id="Z1m-kj-L64"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="27"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="singleLineEtched" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="6Q7-LM-K0l">
-                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="320" id="1jI-VC-bPH"/>
-                                    <constraint firstAttribute="height" constant="211" id="q0h-D1-xji"/>
-                                </constraints>
-                                <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="menuItem" textLabel="sdh-N6-xBO" style="IBUITableViewCellStyleDefault" id="Gee-uX-7Kv">
-                                        <rect key="frame" x="0.0" y="34" width="320" height="46"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="10" y="1" width="280" height="43"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Groups" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="sdh-N6-xBO">
-                                                    <rect key="frame" x="10" y="0.0" width="260" height="43"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                </label>
-                                            </subviews>
-                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        </view>
-                                    </tableViewCell>
-                                </prototypes>
-                                <sections/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" image="profile.png">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
-                                    <outlet property="dataSource" destination="s9K-LH-ODK" id="Z2Z-ST-uh3"/>
-                                    <outlet property="delegate" destination="s9K-LH-ODK" id="d3j-XL-gRC"/>
+                                    <action selector="openComingSoon:" destination="s9K-LH-ODK" eventType="touchUpInside" id="dcB-EG-2Ua"/>
                                 </connections>
-                            </tableView>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fG8-1O-xyo">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="258" id="EHU-p2-3bd"/>
+                                    <constraint firstAttribute="height" constant="216" id="inJ-mB-loW"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="245" type="user" id="pQe-UM-a7p"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" image="groups.png">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="openGroups:" destination="s9K-LH-ODK" eventType="touchUpInside" id="Zxa-Vm-Wsh"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wF9-7J-Col">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="267" id="Trr-B0-QK9"/>
+                                    <constraint firstAttribute="height" constant="247" id="VyP-vT-Ww7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" image="blogbtn.png">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="openBlogs:" destination="s9K-LH-ODK" eventType="touchUpInside" id="ghj-4r-M3T"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xhv-A5-qsP">
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="513" type="user" id="5jA-do-1QL"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="179" type="user" id="o80-gF-LXI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Button" image="region_btn.png">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="openComingSoon:" destination="s9K-LH-ODK" eventType="touchUpInside" id="G5b-0p-bgY"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nHc-cp-FmI">
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="262" type="user" id="SeT-of-td9"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="294" type="user" id="zZL-yQ-YWW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" image="pf_btn.png">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="openComingSoon:" destination="s9K-LH-ODK" eventType="touchUpInside" id="NVM-fr-whW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JHW-0g-HNX">
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="298" type="user" id="Khx-3R-ya1"/>
+                                    <constraint firstAttribute="width" constant="515" id="Yqx-03-iTn"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" image="news_btn.png">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Copyright TFANet 2013" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kp0-xt-9HO">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="6Q7-LM-K0l" firstAttribute="leading" secondItem="KYF-AD-kdA" secondAttribute="leading" constant="213" id="NCN-Iu-5wX"/>
-                            <constraint firstItem="bH2-aC-fHQ" firstAttribute="top" secondItem="KYF-AD-kdA" secondAttribute="top" constant="90" id="NXW-Rj-aFr"/>
-                            <constraint firstItem="6Q7-LM-K0l" firstAttribute="top" secondItem="bH2-aC-fHQ" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Yaq-Wd-gM4"/>
-                            <constraint firstItem="AKm-jQ-MMV" firstAttribute="top" secondItem="KYF-AD-kdA" secondAttribute="top" constant="354" id="ZJC-Om-ALv"/>
-                            <constraint firstAttribute="centerX" secondItem="bH2-aC-fHQ" secondAttribute="centerX" type="user" id="gKw-pM-UHY"/>
-                            <constraint firstItem="bH2-aC-fHQ" firstAttribute="leading" secondItem="AKm-jQ-MMV" secondAttribute="leading" type="default" id="hAJ-eS-vkc"/>
-                            <constraint firstAttribute="centerX" secondItem="AKm-jQ-MMV" secondAttribute="centerX" type="user" id="vT0-lB-jXn"/>
+                            <constraint firstItem="Xhv-A5-qsP" firstAttribute="top" relation="greaterThanOrEqual" secondItem="KYF-AD-kdA" secondAttribute="top" constant="497" type="user" id="8sv-4i-5vm"/>
+                            <constraint firstItem="JHW-0g-HNX" firstAttribute="leading" secondItem="KYF-AD-kdA" secondAttribute="leading" constant="252" id="9nY-h3-Hwm"/>
+                            <constraint firstItem="eNm-tX-DfC" firstAttribute="top" secondItem="KYF-AD-kdA" secondAttribute="top" constant="224" id="B2r-11-rVi"/>
+                            <constraint firstItem="Xhv-A5-qsP" firstAttribute="leading" secondItem="KYF-AD-kdA" secondAttribute="leading" constant="2" id="CQw-uq-PrL"/>
+                            <constraint firstItem="GEG-bs-lNv" firstAttribute="leading" secondItem="KYF-AD-kdA" secondAttribute="leading" type="default" id="CzW-Ut-ZNQ"/>
+                            <constraint firstItem="eNm-tX-DfC" firstAttribute="top" relation="lessThanOrEqual" secondItem="KYF-AD-kdA" secondAttribute="top" constant="265" type="user" id="Ey6-Dn-qMd"/>
+                            <constraint firstItem="nHc-cp-FmI" firstAttribute="leading" secondItem="KYF-AD-kdA" secondAttribute="leading" constant="4" id="H73-hi-pMg"/>
+                            <constraint firstItem="GEG-bs-lNv" firstAttribute="top" secondItem="KYF-AD-kdA" secondAttribute="top" type="default" id="HHo-GS-MgY"/>
+                            <constraint firstAttribute="centerX" secondItem="Kp0-xt-9HO" secondAttribute="centerX" type="user" id="HP9-7p-5ss"/>
+                            <constraint firstItem="GEG-bs-lNv" firstAttribute="trailing" secondItem="KYF-AD-kdA" secondAttribute="trailing" type="default" id="ISU-JS-WgW"/>
+                            <constraint firstItem="Kp0-xt-9HO" firstAttribute="top" secondItem="GEG-bs-lNv" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="UbM-fX-zLQ"/>
+                            <constraint firstItem="wF9-7J-Col" firstAttribute="trailing" secondItem="fG8-1O-xyo" secondAttribute="trailing" type="default" id="UhR-b5-x3O"/>
+                            <constraint firstItem="JHW-0g-HNX" firstAttribute="top" secondItem="KYF-AD-kdA" secondAttribute="top" constant="661" type="user" id="WdA-Sc-4Tg"/>
+                            <constraint firstItem="wF9-7J-Col" firstAttribute="top" secondItem="KYF-AD-kdA" secondAttribute="top" constant="433" id="ZFo-dO-bK0"/>
+                            <constraint firstAttribute="bottom" secondItem="JHW-0g-HNX" secondAttribute="bottom" constant="45" type="user" id="dLd-iS-8sF"/>
+                            <constraint firstItem="nHc-cp-FmI" firstAttribute="bottom" secondItem="GEG-bs-lNv" secondAttribute="bottom" type="default" id="kwG-XK-fNk"/>
+                            <constraint firstAttribute="trailing" secondItem="fG8-1O-xyo" secondAttribute="trailing" constant="3" id="le4-gQ-tIG"/>
+                            <constraint firstItem="eNm-tX-DfC" firstAttribute="leading" secondItem="KYF-AD-kdA" secondAttribute="leading" constant="3" id="pri-rv-wRz"/>
+                            <constraint firstItem="Xhv-A5-qsP" firstAttribute="top" secondItem="KYF-AD-kdA" secondAttribute="top" constant="497" id="she-h9-AVe"/>
+                            <constraint firstItem="fG8-1O-xyo" firstAttribute="top" secondItem="eNm-tX-DfC" secondAttribute="top" type="default" id="wgk-zi-St4"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="TTp-gy-Qu8"/>
                     <connections>
-                        <outlet property="menu" destination="6Q7-LM-K0l" id="AmQ-7m-Pga"/>
-                        <outlet property="status" destination="AKm-jQ-MMV" id="3ky-zI-43N"/>
                         <segue destination="3Ub-eu-qom" kind="push" identifier="showGroups" id="Bcb-OR-eU0"/>
                     </connections>
                 </viewController>
@@ -261,9 +334,16 @@
         </scene>
     </scenes>
     <resources>
+        <image name="blogbtn.png" width="527" height="489"/>
+        <image name="groups.png" width="512" height="472"/>
         <image name="login_hoverbtn.png" width="446" height="139"/>
         <image name="loginbg.png" width="1536" height="2048"/>
         <image name="loginbtn_hover.png" width="446" height="139"/>
+        <image name="menu.png" width="1536" height="2048"/>
+        <image name="news_btn.png" width="1042" height="631"/>
+        <image name="pf_btn.png" width="506" height="612"/>
+        <image name="profile.png" width="1032" height="617"/>
+        <image name="region_btn.png" width="1032" height="314"/>
     </resources>
     <classes>
         <class className="GroupCell" superclassName="UITableViewCell">
@@ -292,8 +372,10 @@
         <class className="LogInViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/LogInViewController.h"/>
             <relationships>
-                <relationship kind="outlet" name="menu" candidateClass="UITableView"/>
-                <relationship kind="outlet" name="status" candidateClass="UILabel"/>
+                <relationship kind="action" name="openBlogs:"/>
+                <relationship kind="action" name="openComingSoon:"/>
+                <relationship kind="action" name="openGroups:"/>
+                <relationship kind="action" name="openMyGroups:"/>
             </relationships>
         </class>
         <class className="NSLayoutConstraint" superclassName="NSObject">
@@ -302,6 +384,7 @@
         <class className="TFANetAppViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/TFANetAppViewController.h"/>
             <relationships>
+                <relationship kind="action" name="doLogin:"/>
                 <relationship kind="outlet" name="_password" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="_username" candidateClass="UITextField"/>
             </relationships>

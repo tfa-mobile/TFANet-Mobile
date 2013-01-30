@@ -44,7 +44,6 @@ TFANetAppAppDelegate *global;
         if([body valueForKey:@"status"]){
             [global storePrefs: _username.text with:_password.text];
             LogInViewController *liv = [self.storyboard instantiateViewControllerWithIdentifier:@"loginView"];
-            liv.status.text = [NSString stringWithFormat:@"Login: %@", [body valueForKey:@"status"]];
             [self.navigationController pushViewController:liv animated:YES];
             [global getAllGroupsWithCompletionBlock:^(NSDictionary *results) {
                 //break

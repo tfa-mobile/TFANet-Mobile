@@ -13,7 +13,6 @@ NSArray *menuItems;
 @end
 
 @implementation LogInViewController
-@synthesize menu;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -28,7 +27,6 @@ NSArray *menuItems;
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    menuItems = [[NSArray alloc] initWithObjects:@"Groups", @"My Groups", @"Blogs", nil];
 }
 
 - (void)didReceiveMemoryWarning
@@ -37,51 +35,21 @@ NSArray *menuItems;
     // Dispose of any resources that can be recreated.
 }
 
--(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
 
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"menuItem"];
-    
-   cell.textLabel.text = [menuItems objectAtIndex:indexPath.row];
-
- return cell;
-
-
-
-}
--(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    switch (indexPath.row) {
-        case 0:
-            [self openGroups:self];
-            [self performSegueWithIdentifier:@"showGroups" sender:self];
-            break;
-        case 1:
-            [self openMyGroups:self];
-            break;
-        case 2:
-            [self openBlogs:self];
-            break;
-        default:
-            break;
-    }
-
-
-}
-
-
--(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 3;
-}
-
--(void)openGroups:(id)sender{
+-(IBAction)openGroups:(id)sender{
+   [self performSegueWithIdentifier:@"showGroups" sender:self];
     NSLog(@"opening groups");
 }
 
--(void)openMyGroups:(id)sender{
+-(IBAction)openMyGroups:(id)sender{
     NSLog(@"opening my groups");
 }
 
--(void)openBlogs:(id)sender{
+-(IBAction)openBlogs:(id)sender{
     NSLog(@"opening blogs");
+}
+-(IBAction)openComingSoon:(id)sender;{
+
 }
 
 @end
