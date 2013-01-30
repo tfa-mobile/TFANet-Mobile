@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface GroupTestViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+@interface MyGroupsViewController : UIViewController <UITableViewDataSource, UITableViewDelegate,UISearchBarDelegate, UISearchDisplayDelegate>
 
 @property (nonatomic, strong) IBOutlet UITableView *groupTableView;
 @property (nonatomic, strong) NSMutableArray *groupList;

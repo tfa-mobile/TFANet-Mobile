@@ -21,6 +21,7 @@ typedef void (^TFANetResponseBlock)(NSDictionary*);
 -(void) loginTFANet:(NSString*) user with: (NSString*) pwd;
 -(void) checkAuthorizationWithCompletionBlock:(TFANetResponseBlock) callback;
 -(void) getAllGroupsWithCompletionBlock:(TFANetResponseBlock)callback;
+-(void) getMyGroupsWithCompletionBlock:(TFANetResponseBlock)callback;
 -(void) getMoreGroupsWithCompletionBlock:(TFANetResponseBlock)callback for:(NSString*) page andSize:(NSString*)step;
 -(bool) prefsSaved;
 -(NSString *)loadUsername;

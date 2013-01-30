@@ -89,6 +89,22 @@ NSUserDefaults *prefs;
     // /lcapi/community/communities?ps=10&page=1&sortby=1&orderby=1&tag=&search=Search+for+a+Group&include=all
 }
 
+-(void) getMyGroupsWithCompletionBlock:(TFANetResponseBlock)callback {
+    [self.authEngine bodyForPath:@"lcapi/community/communities?ps=25&page=1&sortby=1&orderby=1&tag=&search=&include=my" verb:@"GET" body:nil isCacheable:FALSE onCompletion:^(NSDictionary *body) {
+        if([body count] >0){
+            
+            callback(body);
+        }else{
+            NSLog(@"Empty body:");
+        }
+    }  onError:^(NSError *error){
+        NSLog(@"error: %@",error);
+        
+    }];
+    
+    
+    // /lcapi/community/communities?ps=10&page=1&sortby=1&orderby=1&tag=&search=Search+for+a+Group&include=all
+}
 
 -(void) getMoreGroupsWithCompletionBlock:(TFANetResponseBlock)callback for:(NSString*) page andSize:(NSString*)step{
     NSMutableDictionary *params = [[NSMutableDictionary alloc] init];
@@ -96,7 +112,8 @@ NSUserDefaults *prefs;
     [params setValue: step forKey:@"ps"];
     [params setValue: @"1" forKey:@"sortby"];
     [params setValue: @"1" forKey:@"orderby"];
-    [params setValue: @"Search+for+a+Group" forKey:@"search"];
+    [params setValue: @"" forKey:@"tag"];
+    [params setValue: @"" forKey:@"search"];
     [params setValue:@"all" forKey:@"include"];
     
     [self.authEngine bodyForPath:@"lcapi/community/communities" verb:@"GET" body:params isCacheable:FALSE onCompletion:^(NSDictionary *body) {

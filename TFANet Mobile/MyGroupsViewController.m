@@ -6,16 +6,16 @@
 //  Copyright (c) 2013 LEI SHI. All rights reserved.
 //
 
-#import "GroupTestViewController.h"
+#import "MyGroupsViewController.h"
 #import "GroupDetailViewController.h"
 #import "GroupCell.h"
 #import "TFANetAppAppDelegate.h"
 #import "Group.h"
-@interface GroupTestViewController ()
+@interface MyGroupsViewController ()
 
 @end
 
-@implementation GroupTestViewController
+@implementation MyGroupsViewController
 {
     NSMutableArray *groups;
     NSArray *searchResults;
@@ -33,14 +33,23 @@
     self.groupList = [[NSMutableArray alloc] init];
     NSString *myIdentifier = @"GroupCell";
     [self.groupTableView registerNib:[UINib nibWithNibName:@"GroupCellView" bundle:nil] forCellReuseIdentifier:myIdentifier];
-
+    UIBarButtonItem *allGroups = [[UIBarButtonItem alloc]
+                                   initWithTitle:@"Search Groups"
+                                   style:UIBarButtonItemStyleBordered
+                                   target:self
+                                   action:@selector(groupView)];
+    self.navigationItem.rightBarButtonItem = allGroups;
+    self.navigationItem.title = @"My Groups";
     [self populateTable];
        
 }
 
+-(void)groupView{
+    [self performSegueWithIdentifier:@"showAllGroups" sender:self];
+}
 -(void) populateTable{
 
-    [global getAllGroupsWithCompletionBlock:^(NSDictionary *results) {
+    [global getMyGroupsWithCompletionBlock:^(NSDictionary *results) {
         [self parseJSON:results];
           }];
 

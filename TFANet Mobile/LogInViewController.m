@@ -48,7 +48,8 @@ NSArray *menuItems;
 -(IBAction)openBlogs:(id)sender{
     NSLog(@"opening blogs");
 }
--(IBAction)openComingSoon:(id)sender;{
+-(IBAction)openComingSoon:(id)sender{
+    [self performSegueWithIdentifier:@"toComingSoon" sender:self];
 
 }
 

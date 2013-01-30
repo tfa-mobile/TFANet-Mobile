@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2643FECD16B9B8D900459864 /* app_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 2643FECC16B9B8D900459864 /* app_bg.png */; };
+		2643FECF16B9B9E700459864 /* img_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 2643FECE16B9B9E700459864 /* img_bg.png */; };
+		2643FED116B9BBCC00459864 /* bg_color.png in Resources */ = {isa = PBXBuildFile; fileRef = 2643FED016B9BBCC00459864 /* bg_color.png */; };
+		2643FED816B9D62C00459864 /* GroupSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2643FED716B9D62C00459864 /* GroupSearchViewController.m */; };
+		2643FEDA16B9D7DC00459864 /* AllGroupCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2643FED916B9D7DC00459864 /* AllGroupCellView.xib */; };
 		99B5FF3E1671235F00AE6179 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99B5FF3D1671235F00AE6179 /* UIKit.framework */; };
 		99B5FF401671235F00AE6179 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99B5FF3F1671235F00AE6179 /* Foundation.framework */; };
 		99B5FF421671235F00AE6179 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99B5FF411671235F00AE6179 /* CoreGraphics.framework */; };
@@ -19,7 +24,7 @@
 		99B5FF571671235F00AE6179 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99B5FF551671235F00AE6179 /* MainStoryboard.storyboard */; };
 		99B5FF5A1671235F00AE6179 /* TFANetAppViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 99B5FF591671235F00AE6179 /* TFANetAppViewController.m */; };
 		99B5FF61167124B100AE6179 /* banner_tfanet.png in Resources */ = {isa = PBXBuildFile; fileRef = 99B5FF60167124B100AE6179 /* banner_tfanet.png */; };
-		AD13C59316B8584100B5CF5C /* GroupTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD13C58D16B8584100B5CF5C /* GroupTestViewController.m */; };
+		AD13C59316B8584100B5CF5C /* MyGroupsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD13C58D16B8584100B5CF5C /* MyGroupsViewController.m */; };
 		AD13C59416B8584100B5CF5C /* GroupCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AD13C59016B8584100B5CF5C /* GroupCell.m */; };
 		AD13C59516B8584100B5CF5C /* GroupDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD13C59116B8584100B5CF5C /* GroupDetailViewController.m */; };
 		AD13C60A16B8775B00B5CF5C /* Group.m in Sources */ = {isa = PBXBuildFile; fileRef = AD13C60916B8775B00B5CF5C /* Group.m */; };
@@ -61,6 +66,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2643FECC16B9B8D900459864 /* app_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = app_bg.png; path = "TFANet Mobile/app_bg.png"; sourceTree = "<group>"; };
+		2643FECE16B9B9E700459864 /* img_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = img_bg.png; path = "TFANet Mobile/img_bg.png"; sourceTree = "<group>"; };
+		2643FED016B9BBCC00459864 /* bg_color.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bg_color.png; path = "TFANet Mobile/bg_color.png"; sourceTree = "<group>"; };
+		2643FED616B9D62C00459864 /* GroupSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GroupSearchViewController.h; path = "TFANet Mobile/GroupSearchViewController.h"; sourceTree = "<group>"; };
+		2643FED716B9D62C00459864 /* GroupSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GroupSearchViewController.m; path = "TFANet Mobile/GroupSearchViewController.m"; sourceTree = "<group>"; };
+		2643FED916B9D7DC00459864 /* AllGroupCellView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AllGroupCellView.xib; path = "TFANet Mobile/AllGroupCellView.xib"; sourceTree = "<group>"; };
 		99B5FF391671235F00AE6179 /* TFANet Mobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TFANet Mobile.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		99B5FF3D1671235F00AE6179 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		99B5FF3F1671235F00AE6179 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -78,12 +89,12 @@
 		99B5FF581671235F00AE6179 /* TFANetAppViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TFANetAppViewController.h; sourceTree = "<group>"; };
 		99B5FF591671235F00AE6179 /* TFANetAppViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TFANetAppViewController.m; sourceTree = "<group>"; };
 		99B5FF60167124B100AE6179 /* banner_tfanet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = banner_tfanet.png; sourceTree = "<group>"; };
-		AD13C58D16B8584100B5CF5C /* GroupTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GroupTestViewController.m; path = "TFANet Mobile/GroupTestViewController.m"; sourceTree = "<group>"; };
+		AD13C58D16B8584100B5CF5C /* MyGroupsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyGroupsViewController.m; path = "TFANet Mobile/MyGroupsViewController.m"; sourceTree = "<group>"; };
 		AD13C58E16B8584100B5CF5C /* GroupDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GroupDetailViewController.h; path = "TFANet Mobile/GroupDetailViewController.h"; sourceTree = "<group>"; };
 		AD13C58F16B8584100B5CF5C /* GroupCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GroupCell.h; path = "TFANet Mobile/GroupCell.h"; sourceTree = "<group>"; };
 		AD13C59016B8584100B5CF5C /* GroupCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GroupCell.m; path = "TFANet Mobile/GroupCell.m"; sourceTree = "<group>"; };
 		AD13C59116B8584100B5CF5C /* GroupDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GroupDetailViewController.m; path = "TFANet Mobile/GroupDetailViewController.m"; sourceTree = "<group>"; };
-		AD13C59216B8584100B5CF5C /* GroupTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GroupTestViewController.h; path = "TFANet Mobile/GroupTestViewController.h"; sourceTree = "<group>"; };
+		AD13C59216B8584100B5CF5C /* MyGroupsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyGroupsViewController.h; path = "TFANet Mobile/MyGroupsViewController.h"; sourceTree = "<group>"; };
 		AD13C60816B8775B00B5CF5C /* Group.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Group.h; sourceTree = "<group>"; };
 		AD13C60916B8775B00B5CF5C /* Group.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Group.m; sourceTree = "<group>"; };
 		AD13C63116B88CE800B5CF5C /* GroupCellView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = GroupCellView.xib; path = "TFANet Mobile/GroupCellView.xib"; sourceTree = "<group>"; };
@@ -196,13 +207,16 @@
 		AD13C59616B8584800B5CF5C /* Group UI */ = {
 			isa = PBXGroup;
 			children = (
+				2643FED616B9D62C00459864 /* GroupSearchViewController.h */,
+				2643FED716B9D62C00459864 /* GroupSearchViewController.m */,
 				AD13C58E16B8584100B5CF5C /* GroupDetailViewController.h */,
 				AD13C59116B8584100B5CF5C /* GroupDetailViewController.m */,
 				AD13C58F16B8584100B5CF5C /* GroupCell.h */,
 				AD13C59016B8584100B5CF5C /* GroupCell.m */,
-				AD13C59216B8584100B5CF5C /* GroupTestViewController.h */,
-				AD13C58D16B8584100B5CF5C /* GroupTestViewController.m */,
+				AD13C59216B8584100B5CF5C /* MyGroupsViewController.h */,
+				AD13C58D16B8584100B5CF5C /* MyGroupsViewController.m */,
 				AD13C63116B88CE800B5CF5C /* GroupCellView.xib */,
+				2643FED916B9D7DC00459864 /* AllGroupCellView.xib */,
 			);
 			name = "Group UI";
 			path = ..;
@@ -211,6 +225,9 @@
 		AD13C6BC16B979CC00B5CF5C /* images */ = {
 			isa = PBXGroup;
 			children = (
+				2643FED016B9BBCC00459864 /* bg_color.png */,
+				2643FECE16B9B9E700459864 /* img_bg.png */,
+				2643FECC16B9B8D900459864 /* app_bg.png */,
 				AD13C6CC16B9A80400B5CF5C /* blogbtn.png */,
 				AD13C6CD16B9A80400B5CF5C /* pf_btn.png */,
 				AD13C6CE16B9A80400B5CF5C /* groups.png */,
@@ -321,6 +338,10 @@
 				AD13C6D716B9A80400B5CF5C /* news_btn.png in Resources */,
 				AD13C6D816B9A80400B5CF5C /* region_btn.png in Resources */,
 				AD13C6D916B9A80400B5CF5C /* menu.png in Resources */,
+				2643FECD16B9B8D900459864 /* app_bg.png in Resources */,
+				2643FECF16B9B9E700459864 /* img_bg.png in Resources */,
+				2643FED116B9BBCC00459864 /* bg_color.png in Resources */,
+				2643FEDA16B9D7DC00459864 /* AllGroupCellView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -336,10 +357,11 @@
 				99B5FF5A1671235F00AE6179 /* TFANetAppViewController.m in Sources */,
 				ADE0629A168101EC00A0F7BF /* TFANetEngine.m in Sources */,
 				ADE062BD16813AE000A0F7BF /* LogInViewController.m in Sources */,
-				AD13C59316B8584100B5CF5C /* GroupTestViewController.m in Sources */,
+				AD13C59316B8584100B5CF5C /* MyGroupsViewController.m in Sources */,
 				AD13C59416B8584100B5CF5C /* GroupCell.m in Sources */,
 				AD13C59516B8584100B5CF5C /* GroupDetailViewController.m in Sources */,
 				AD13C60A16B8775B00B5CF5C /* Group.m in Sources */,
+				2643FED816B9D62C00459864 /* GroupSearchViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
