@@ -29,8 +29,8 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tJI-dV-FMU">
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="224" id="Poa-Nu-a9q"/>
-                                    <constraint firstAttribute="height" constant="54" id="YGp-uV-YnS"/>
+                                    <constraint firstAttribute="width" constant="223" id="Crw-8W-qxd"/>
+                                    <constraint firstAttribute="height" constant="75" id="ovb-sc-gvZ"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" backgroundImage="loginbtn_hover.png">
@@ -54,18 +54,23 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <switch opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4Cu-eT-6TB">
+                                <color key="onTintColor" red="0.74901962280273438" green="0.18039216101169586" blue="0.10196079313755035" alpha="1" colorSpace="deviceRGB"/>
+                            </switch>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="A4R-9l-7Hp" firstAttribute="trailing" secondItem="qQe-Lq-EXb" secondAttribute="trailing" type="default" id="0wT-bp-Qyr"/>
                             <constraint firstItem="A4R-9l-7Hp" firstAttribute="top" secondItem="5" secondAttribute="top" constant="406" id="1jT-m7-ZWp"/>
                             <constraint firstAttribute="bottom" secondItem="qQe-Lq-EXb" secondAttribute="bottom" constant="443" id="3Dd-TL-pfg"/>
+                            <constraint firstItem="4Cu-eT-6TB" firstAttribute="leading" secondItem="5" secondAttribute="leading" constant="141" id="4GM-FV-Gua"/>
                             <constraint firstItem="qQe-Lq-EXb" firstAttribute="leading" secondItem="A4R-9l-7Hp" secondAttribute="leading" type="default" id="Ajr-cJ-PPX"/>
-                            <constraint firstAttribute="bottom" secondItem="tJI-dV-FMU" secondAttribute="bottom" constant="296" id="GFD-Tx-MBm"/>
                             <constraint firstItem="A4R-9l-7Hp" firstAttribute="leading" secondItem="5" secondAttribute="leading" constant="222" id="Hd9-MJ-c6f"/>
                             <constraint firstItem="h0l-Dc-w5K" firstAttribute="trailing" secondItem="5" secondAttribute="trailing" type="default" id="NBC-Qt-f9A"/>
                             <constraint firstItem="tJI-dV-FMU" firstAttribute="centerX" secondItem="5" secondAttribute="centerX" type="default" id="Q9O-Ma-gS9"/>
+                            <constraint firstAttribute="bottom" secondItem="4Cu-eT-6TB" secondAttribute="bottom" constant="375" id="RMJ-ql-vdm"/>
                             <constraint firstItem="h0l-Dc-w5K" firstAttribute="bottom" secondItem="5" secondAttribute="bottom" type="default" id="XDY-jx-zTR"/>
+                            <constraint firstAttribute="bottom" secondItem="tJI-dV-FMU" secondAttribute="bottom" constant="285" id="yz9-RI-KSm"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Zy4-DQ-5b8"/>
