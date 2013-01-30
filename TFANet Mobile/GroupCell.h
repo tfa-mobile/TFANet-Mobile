@@ -11,7 +11,7 @@
 @interface GroupCell : UITableViewCell
 
 @property (nonatomic, strong) IBOutlet UILabel *membercount;
-@property (nonatomic, strong) IBOutlet UILabel *groupSummary;
+@property (nonatomic, strong) IBOutlet UITextView *groupSummary;
 @property (nonatomic, strong) IBOutlet UILabel *groupTitle;
 @property (nonatomic, strong) IBOutlet UIImageView *icon;
 @property (nonatomic, strong) IBOutlet UILabel *groupID;
