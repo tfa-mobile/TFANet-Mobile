@@ -14,6 +14,5 @@
 
 @property IBOutlet UITextField * _username;
 @property IBOutlet UITextField *_password;
-@property IBOutlet UILabel *_serverResponse;
 
 @end

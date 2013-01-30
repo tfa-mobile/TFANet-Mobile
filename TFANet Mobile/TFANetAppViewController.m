@@ -17,7 +17,7 @@
 @implementation TFANetAppViewController
 TFANetAppAppDelegate *global;
 
-@synthesize _username, _password, _serverResponse;
+@synthesize _username, _password;
 
 - (void)viewDidLoad
 {
@@ -39,7 +39,6 @@ TFANetAppAppDelegate *global;
 }
 
 - (IBAction)doLogin:(id)sender {
-    _serverResponse.text = @"Hello!";
     [global loginTFANet:_username.text with:_password.text];
     [global checkAuthorizationWithCompletionBlock:^(NSDictionary *body) {
         if([body valueForKey:@"status"]){

@@ -24,6 +24,10 @@
 		AD13C59516B8584100B5CF5C /* GroupDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD13C59116B8584100B5CF5C /* GroupDetailViewController.m */; };
 		AD13C60A16B8775B00B5CF5C /* Group.m in Sources */ = {isa = PBXBuildFile; fileRef = AD13C60916B8775B00B5CF5C /* Group.m */; };
 		AD13C63216B88CE800B5CF5C /* GroupCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD13C63116B88CE800B5CF5C /* GroupCellView.xib */; };
+		AD13C6BB16B979C500B5CF5C /* loginbg.png in Resources */ = {isa = PBXBuildFile; fileRef = AD13C6BA16B979C500B5CF5C /* loginbg.png */; };
+		AD13C6C016B97F3700B5CF5C /* login_hoverbtn.png in Resources */ = {isa = PBXBuildFile; fileRef = AD13C6BD16B97F3700B5CF5C /* login_hoverbtn.png */; };
+		AD13C6C116B97F3700B5CF5C /* loginbtn_hover.png in Resources */ = {isa = PBXBuildFile; fileRef = AD13C6BE16B97F3700B5CF5C /* loginbtn_hover.png */; };
+		AD13C6C216B97F3700B5CF5C /* login_btn.png in Resources */ = {isa = PBXBuildFile; fileRef = AD13C6BF16B97F3700B5CF5C /* login_btn.png */; };
 		ADE062431680F9A400A0F7BF /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADE062421680F9A400A0F7BF /* CFNetwork.framework */; };
 		ADE062451680F9A900A0F7BF /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADE062441680F9A900A0F7BF /* Security.framework */; };
 		ADE062471680F9B900A0F7BF /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADE062461680F9B900A0F7BF /* SystemConfiguration.framework */; };
@@ -76,6 +80,10 @@
 		AD13C60816B8775B00B5CF5C /* Group.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Group.h; sourceTree = "<group>"; };
 		AD13C60916B8775B00B5CF5C /* Group.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Group.m; sourceTree = "<group>"; };
 		AD13C63116B88CE800B5CF5C /* GroupCellView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = GroupCellView.xib; path = "TFANet Mobile/GroupCellView.xib"; sourceTree = "<group>"; };
+		AD13C6BA16B979C500B5CF5C /* loginbg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = loginbg.png; path = "TFANet Mobile/loginbg.png"; sourceTree = "<group>"; };
+		AD13C6BD16B97F3700B5CF5C /* login_hoverbtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = login_hoverbtn.png; path = "TFANet Mobile/login_hoverbtn.png"; sourceTree = "<group>"; };
+		AD13C6BE16B97F3700B5CF5C /* loginbtn_hover.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = loginbtn_hover.png; path = "TFANet Mobile/loginbtn_hover.png"; sourceTree = "<group>"; };
+		AD13C6BF16B97F3700B5CF5C /* login_btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = login_btn.png; path = "TFANet Mobile/login_btn.png"; sourceTree = "<group>"; };
 		ADE062421680F9A400A0F7BF /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		ADE062441680F9A900A0F7BF /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		ADE062461680F9B900A0F7BF /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
@@ -107,6 +115,7 @@
 		99B5FF2E1671235F00AE6179 = {
 			isa = PBXGroup;
 			children = (
+				AD13C6BC16B979CC00B5CF5C /* images */,
 				ADE0628C1680FEFB00A0F7BF /* MKNetworkKit-iOS.xcodeproj */,
 				99B5FF431671235F00AE6179 /* TFANet Mobile */,
 				99B5FF3C1671235F00AE6179 /* Frameworks */,
@@ -183,6 +192,17 @@
 			);
 			name = "Group UI";
 			path = ..;
+			sourceTree = "<group>";
+		};
+		AD13C6BC16B979CC00B5CF5C /* images */ = {
+			isa = PBXGroup;
+			children = (
+				AD13C6BD16B97F3700B5CF5C /* login_hoverbtn.png */,
+				AD13C6BE16B97F3700B5CF5C /* loginbtn_hover.png */,
+				AD13C6BF16B97F3700B5CF5C /* login_btn.png */,
+				AD13C6BA16B979C500B5CF5C /* loginbg.png */,
+			);
+			name = images;
 			sourceTree = "<group>";
 		};
 		ADE0628D1680FEFB00A0F7BF /* Products */ = {
@@ -269,6 +289,10 @@
 				99B5FF571671235F00AE6179 /* MainStoryboard.storyboard in Resources */,
 				99B5FF61167124B100AE6179 /* banner_tfanet.png in Resources */,
 				AD13C63216B88CE800B5CF5C /* GroupCellView.xib in Resources */,
+				AD13C6BB16B979C500B5CF5C /* loginbg.png in Resources */,
+				AD13C6C016B97F3700B5CF5C /* login_hoverbtn.png in Resources */,
+				AD13C6C116B97F3700B5CF5C /* loginbtn_hover.png in Resources */,
+				AD13C6C216B97F3700B5CF5C /* login_btn.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
