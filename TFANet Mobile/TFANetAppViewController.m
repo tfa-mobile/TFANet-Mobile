@@ -24,6 +24,12 @@ TFANetAppAppDelegate *global;
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     global = [[UIApplication sharedApplication] delegate];
+    if ([global prefsSaved]){
+        //load fields from NSUserdata
+        _username.text = [global loadUsername];
+        _password.text = [global loadPassword];
+    
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -37,6 +43,7 @@ TFANetAppAppDelegate *global;
     [global loginTFANet:_username.text with:_password.text];
     [global checkAuthorizationWithCompletionBlock:^(NSDictionary *body) {
         if([body valueForKey:@"status"]){
+            [global storePrefs: _username.text with:_password.text];
             LogInViewController *liv = [self.storyboard instantiateViewControllerWithIdentifier:@"loginView"];
             liv.status.text = [NSString stringWithFormat:@"Login: %@", [body valueForKey:@"status"]];
             [self.navigationController pushViewController:liv animated:YES];

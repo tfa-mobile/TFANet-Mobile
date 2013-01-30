@@ -22,4 +22,9 @@ typedef void (^TFANetResponseBlock)(NSDictionary*);
 -(void) checkAuthorizationWithCompletionBlock:(TFANetResponseBlock) callback;
 -(void) getAllGroupsWithCompletionBlock:(TFANetResponseBlock)callback;
 -(void) getMoreGroupsWithCompletionBlock:(TFANetResponseBlock)callback for:(NSString*) page andSize:(NSString*)step;
+-(bool) prefsSaved;
+-(NSString *)loadUsername;
+-(NSString *) loadPassword;
+-(void) storePrefs:(NSString *)username with:(NSString*)pwd;
+
 @end

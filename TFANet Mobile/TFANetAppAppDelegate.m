@@ -7,8 +7,12 @@
 //
 
 #import "TFANetAppAppDelegate.h"
+#define kUsernameKey                        @"username"
+#define kPasswordKey                        @"password"
+
 
 @implementation TFANetAppAppDelegate
+NSUserDefaults *prefs;
 @synthesize authEngine, window;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
@@ -16,6 +20,9 @@
     // Override point for customization after application launch.
 
     self.authEngine = [[TFANetEngine alloc] initWithHostName:@"dev.tfanet.org"];
+    
+    prefs = [NSUserDefaults standardUserDefaults];
+    //clear keychain on first run or reinstallation
     
     return YES;
 }
@@ -47,7 +54,24 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+-(bool)prefsSaved{
 
+    return ([[NSUserDefaults standardUserDefaults] objectForKey:kUsernameKey]);
+}
+
+-(NSString *)loadUsername{
+        return [prefs objectForKey:kUsernameKey];
+}
+
+-(NSString *) loadPassword{
+    return [prefs objectForKey:kPasswordKey];
+}
+
+-(void) storePrefs:(NSString *)username with:(NSString *)pwd{
+    [prefs setObject:username forKey:kUsernameKey];
+    [prefs setObject:pwd forKey:kPasswordKey];
+
+}
 -(void) getAllGroupsWithCompletionBlock:(TFANetResponseBlock)callback {
     [self.authEngine bodyForPath:@"lcapi/community/communities?ps=25&page=1&sortby=1&orderby=1&tag=&search=Search+for+a+Group&include=all" verb:@"GET" body:nil isCacheable:FALSE onCompletion:^(NSDictionary *body) {
         if([body count] >0){
