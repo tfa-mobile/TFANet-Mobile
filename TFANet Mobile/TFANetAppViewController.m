@@ -36,7 +36,7 @@ TFANetAppAppDelegate *global;
     _serverResponse.text = @"Hello!";
     [global loginTFANet:_username.text with:_password.text];
     [global checkAuthorizationWithCompletionBlock:^(NSDictionary *body) {
-        if([body valueForKey:@"status"]==@"success"){
+        if([body valueForKey:@"status"]){
             LogInViewController *liv = [self.storyboard instantiateViewControllerWithIdentifier:@"loginView"];
             liv.status.text = [NSString stringWithFormat:@"Login: %@", [body valueForKey:@"status"]];
             [self.navigationController pushViewController:liv animated:YES];

@@ -12,4 +12,6 @@
 
 @property (nonatomic, strong) IBOutlet UITableView *groupTableView;
 @property (nonatomic, strong) NSMutableArray *groupList;
+@property (nonatomic) NSString *start, *step;
+
 @end

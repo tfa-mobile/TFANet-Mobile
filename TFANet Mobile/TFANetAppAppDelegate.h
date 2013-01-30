@@ -14,9 +14,12 @@ typedef void (^TFANetResponseBlock)(NSDictionary*);
 
 @property (strong, nonatomic) UIWindow *window;
 @property (nonatomic, retain) TFANetEngine *authEngine;
+@property (nonatomic) NSInteger start;
+@property (nonatomic) NSInteger step;
 
 
 -(void) loginTFANet:(NSString*) user with: (NSString*) pwd;
 -(void) checkAuthorizationWithCompletionBlock:(TFANetResponseBlock) callback;
 -(void) getAllGroupsWithCompletionBlock:(TFANetResponseBlock)callback;
+-(void) getMoreGroupsWithCompletionBlock:(TFANetResponseBlock)callback for:(NSString*) page andSize:(NSString*)step;
 @end

@@ -66,7 +66,30 @@
 }
 
 
-
+-(void) getMoreGroupsWithCompletionBlock:(TFANetResponseBlock)callback for:(NSString*) page andSize:(NSString*)step{
+    NSMutableDictionary *params = [[NSMutableDictionary alloc] init];
+    [params setValue: page forKey:@"page"];
+    [params setValue: step forKey:@"ps"];
+    [params setValue: @"1" forKey:@"sortby"];
+    [params setValue: @"1" forKey:@"orderby"];
+    [params setValue: @"Search+for+a+Group" forKey:@"search"];
+    [params setValue:@"all" forKey:@"include"];
+    
+    [self.authEngine bodyForPath:@"lcapi/community/communities" verb:@"GET" body:params isCacheable:FALSE onCompletion:^(NSDictionary *body) {
+        if([body count] >0){
+            
+            callback(body);
+        }else{
+            NSLog(@"Empty body:");
+        }
+    }  onError:^(NSError *error){
+        NSLog(@"error: %@",error);
+        
+    }];
+    
+    
+    // /lcapi/community/communities?ps=10&page=1&sortby=1&orderby=1&tag=&search=Search+for+a+Group&include=all
+}
 -(void) loginTFANet:(NSString*) user with: (NSString*) pwd{
     NSMutableDictionary *dict = [[NSMutableDictionary alloc] init];
     [dict setValue:user forKey:@"j_username"];

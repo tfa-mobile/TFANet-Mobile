@@ -10,7 +10,7 @@
 
 @implementation Group{}
 
-+(Group*)groupWithDictionary:(NSDictionary*)dict
++(Group*) groupWithDictionary:(NSDictionary*)dict
 {
     Group* group = [[Group alloc]init];
     

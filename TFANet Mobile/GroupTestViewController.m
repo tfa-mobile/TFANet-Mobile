@@ -23,7 +23,7 @@
     
 }
 
-@synthesize groupTableView, groupList;
+@synthesize groupTableView, groupList, start, step;
 
 - (void)viewDidLoad
 {
@@ -34,24 +34,43 @@
     NSString *myIdentifier = @"GroupCell";
     [self.groupTableView registerNib:[UINib nibWithNibName:@"GroupCellView" bundle:nil] forCellReuseIdentifier:myIdentifier];
 
-    [self parseJSON];
+    [self populateTable];
        
 }
 
--(void) parseJSON{
+-(void) populateTable{
 
     [global getAllGroupsWithCompletionBlock:^(NSDictionary *results) {
-        NSLog(@"result keys: %@", results.allKeys);
-        NSDictionary* feed = [results objectForKey:@"feed"];
-        NSLog(@"keys in entry: %@", feed.allKeys);
-        NSArray* feedArray = [feed objectForKey:@"entry"];
-        for (NSDictionary *dic in feedArray) {
-            [self.groupList addObject:[Group groupWithDictionary:dic]];
-        }
-        [groupTableView reloadData];
-    }];
+        [self parseJSON:results];
+          }];
 
 }
+-(void) addToDataSource{
+
+    [global getMoreGroupsWithCompletionBlock:^(NSDictionary *results) {
+       [self parseJSON:results];
+    } for:start andSize:step];
+
+
+
+}
+-(void)parseJSON:(NSDictionary*)results{
+ 
+    NSLog(@"result keys: %@", results.allKeys);
+    NSDictionary* feed = [results objectForKey:@"feed"];
+    NSLog(@"keys in entry: %@", feed.allKeys);
+    start = (NSString*)[feed objectForKey:@"startIndex"];
+    step =  (NSString*)[feed objectForKey:@"itemsPerPage"];
+    NSArray* feedArray = [feed objectForKey:@"entry"];
+   
+    for (NSDictionary *dic in feedArray) {
+        [self.groupList addObject:[Group groupWithDictionary:dic]];
+    }
+    [groupTableView reloadData];
+
+    
+}
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     if (tableView == self.searchDisplayController.searchResultsTableView) {
@@ -69,11 +88,6 @@
     
     GroupCell *cell = (GroupCell *)[tableView dequeueReusableCellWithIdentifier:groupIdentifier];
     
-    if (cell == nil) {
-        NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"GroupCell" owner:self options:nil];
-        cell = [nib objectAtIndex:0];
-    }
-    
     if (tableView == self.searchDisplayController.searchResultsTableView) {
          [self performSegueWithIdentifier: @"showRecipeDetail" sender: self];
     } else {
@@ -88,7 +102,7 @@
     }
     if(indexPath.row == [groupList count]){
         //need to reload data
-    
+        [self addToDataSource];
     }
     return cell;
 }
