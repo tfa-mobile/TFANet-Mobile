@@ -39,8 +39,7 @@ TFANetAppAppDelegate *global;
 }
 
 - (IBAction)doLogin:(id)sender {
-    [global loginTFANet:_username.text with:_password.text];
-    [global checkAuthorizationWithCompletionBlock:^(NSDictionary *body) {
+    [global loginTFANet:_username.text with:_password.text usingCompleteCallbacK:^(NSDictionary *body) {
         if([body valueForKey:@"status"]){
             [global storePrefs: _username.text with:_password.text];
             LogInViewController *liv = [self.storyboard instantiateViewControllerWithIdentifier:@"loginView"];
@@ -48,9 +47,10 @@ TFANetAppAppDelegate *global;
         }
         else{
             NSLog(@"Incorrect Login Information. Try again.");
-        
+            
         }
     }];
+
 }
 
 @end

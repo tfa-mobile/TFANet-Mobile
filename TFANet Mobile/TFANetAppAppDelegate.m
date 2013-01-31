@@ -127,7 +127,7 @@ NSUserDefaults *prefs;
     
     // /lcapi/community/communities?ps=10&page=1&sortby=1&orderby=1&tag=&search=Search+for+a+Group&include=all
 }
--(void) loginTFANet:(NSString*) user with: (NSString*) pwd{
+-(void) loginTFANet:(NSString*) user with: (NSString*) pwd usingCompleteCallbacK:(TFANetResponseBlock) callback{
     NSMutableDictionary *dict = [[NSMutableDictionary alloc] init];
     [dict setValue:user forKey:@"j_username"];
     [dict setValue:pwd forKey:@"j_password"];
@@ -135,7 +135,9 @@ NSUserDefaults *prefs;
     [self.authEngine bodyForPath:@"mobileauth/j_security_check" verb:@"POST" body:dict isCacheable:NO onCompletion:^(NSDictionary *body) {
         if([body count]>0){
         
-            NSLog(@"body: %@", body);
+           [self checkAuthorizationWithCompletionBlock:^(NSDictionary *body) {
+               callback(body);
+           }];
         }
         else{
             NSLog(@"Got the form back.");

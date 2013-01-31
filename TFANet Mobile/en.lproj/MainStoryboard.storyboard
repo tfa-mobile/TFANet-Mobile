@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2844" systemVersion="12C2034" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="Gbo-aT-QoW">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2844" systemVersion="12C3012" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="Gbo-aT-QoW">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1930"/>
     </dependencies>
@@ -464,57 +464,6 @@
         <image name="profile.png" width="1032" height="617"/>
         <image name="region_btn.png" width="1032" height="314"/>
     </resources>
-    <classes>
-        <class className="GroupCell" superclassName="UITableViewCell">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/GroupCell.h"/>
-            <relationships>
-                <relationship kind="outlet" name="groupID" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="groupSummary" candidateClass="UITextView"/>
-                <relationship kind="outlet" name="groupTitle" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="icon" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="membercount" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="updated" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="GroupDetailViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/GroupDetailViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="groupLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="GroupSearchViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/GroupSearchViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="groupTableView" candidateClass="UITableView"/>
-            </relationships>
-        </class>
-        <class className="LogInViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/LogInViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="openBlogs:"/>
-                <relationship kind="action" name="openComingSoon:"/>
-                <relationship kind="action" name="openGroups:"/>
-                <relationship kind="action" name="openMyGroups:"/>
-            </relationships>
-        </class>
-        <class className="MyGroupsViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/MyGroupsViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="groupTableView" candidateClass="UITableView"/>
-            </relationships>
-        </class>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-        <class className="TFANetAppViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/TFANetAppViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="doLogin:"/>
-                <relationship kind="outlet" name="_password" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="_username" candidateClass="UITextField"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackTranslucent"/>
         <simulatedOrientationMetrics key="orientation"/>

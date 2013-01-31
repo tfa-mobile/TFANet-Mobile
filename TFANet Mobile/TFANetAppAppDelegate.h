@@ -18,7 +18,7 @@ typedef void (^TFANetResponseBlock)(NSDictionary*);
 @property (nonatomic) NSInteger step;
 
 
--(void) loginTFANet:(NSString*) user with: (NSString*) pwd;
+-(void) loginTFANet:(NSString*) user with: (NSString*) pwd usingCompleteCallbacK:(TFANetResponseBlock) callback;
 -(void) checkAuthorizationWithCompletionBlock:(TFANetResponseBlock) callback;
 -(void) getAllGroupsWithCompletionBlock:(TFANetResponseBlock)callback;
 -(void) getMyGroupsWithCompletionBlock:(TFANetResponseBlock)callback;
