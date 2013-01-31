@@ -23,7 +23,7 @@
     
 }
 
-@synthesize groupTableView, groupList, start, step, totalResults;
+@synthesize groupTableView, groupList, start, step, totalResults, set;
 
 - (void)viewDidLoad
 {
@@ -56,7 +56,10 @@
 }
 -(void) addToDataSource{
     start = [NSNumber numberWithInt:start.intValue + 1];
-    
+//    NSLog(@"Getting Page: %d", start.intValue);
+//    NSLog(@"Total Items: %d", totalResults.intValue);
+//    NSLog(@"With Page Size: %d", step.intValue);
+
     if(!totalResults.intValue < (step.intValue * start.intValue)){
     [global getMoreGroupsWithCompletionBlock:^(NSDictionary *results) {
        [self parseJSON:results];
@@ -71,9 +74,12 @@
     NSLog(@"result keys: %@", results.allKeys);
     NSDictionary* feed = [results objectForKey:@"feed"];
     NSLog(@"keys in entry: %@", feed.allKeys);
+    if(!set){
     start = (NSNumber*)[feed objectForKey:@"startIndex"];
     step =  (NSNumber*)[feed objectForKey:@"itemsPerPage"];
     totalResults = (NSNumber*)[feed objectForKey:@"totalResults"];
+        set = true;
+    }
     NSArray* feedArray = [feed objectForKey:@"entry"];
    
     for (NSDictionary *dic in feedArray) {

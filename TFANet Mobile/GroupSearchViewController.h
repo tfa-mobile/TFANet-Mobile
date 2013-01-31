@@ -13,4 +13,5 @@
 @property (nonatomic, strong) IBOutlet UITableView *groupTableView;
 @property (nonatomic, strong) NSMutableArray *groupList;
 @property (nonatomic) NSNumber *start, *totalResults, *step;
+@property (nonatomic) bool set;
 @end

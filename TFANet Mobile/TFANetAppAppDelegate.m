@@ -73,7 +73,7 @@ NSUserDefaults *prefs;
 
 }
 -(void) getAllGroupsWithCompletionBlock:(TFANetResponseBlock)callback {
-    [self.authEngine bodyForPath:@"lcapi/community/communities?ps=25&page=1&sortby=1&orderby=1&tag=&search=Search+for+a+Group&include=all" verb:@"GET" body:nil isCacheable:FALSE onCompletion:^(NSDictionary *body) {
+    [self.authEngine bodyForPath:@"lcapi/community/communities?ps=25&page=1&sortby=1&orderby=1&tag=&search=&include=all" verb:@"GET" body:nil isCacheable:FALSE onCompletion:^(NSDictionary *body) {
         if([body count] >0){
             
             callback(body);
