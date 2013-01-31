@@ -86,6 +86,23 @@ NSUserDefaults *prefs;
     }];
     
 }
+-(void) getDiscussionsInGroup:(NSString*)handle withCallback:(TFANetResponseBlock) callback{
+    NSString *url = [NSString stringWithFormat:@"lcapi/blogs/%@?ps=10&page=1&sortby=0&order=1", handle];
+    
+    [self.authEngine bodyForPath:url verb:@"GET" body:nil isCacheable:FALSE onCompletion:^(NSDictionary *body) {
+        if([body count] >0){
+            
+            callback(body);
+        }else{
+            NSLog(@"Empty body:");
+        }
+    }  onError:^(NSError *error){
+        NSLog(@"error: %@",error);
+        
+    }];
+
+
+}
 
 -(void) getMyGroupsWithCompletionBlock:(TFANetResponseBlock)callback {
     [self.authEngine bodyForPath:@"lcapi/community/communities?ps=25&page=1&sortby=1&orderby=1&tag=&search=&include=my" verb:@"GET" body:nil isCacheable:FALSE onCompletion:^(NSDictionary *body) {

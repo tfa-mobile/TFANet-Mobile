@@ -11,6 +11,7 @@
 #import "GroupCell.h"
 #import "TFANetAppAppDelegate.h"
 #import "Group.h"
+#import "DicussionViewController.h" 
 @interface MyGroupsViewController ()
 
 @end
@@ -61,9 +62,6 @@
        [self parseJSON:results];
     } for: start andSize:step];
     }
-
-
-
 }
 -(void)parseJSON:(NSDictionary*)results{
  
@@ -116,13 +114,20 @@
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    [self performSegueWithIdentifier:@"showGroupDetail" sender:self];
-}
+    Group *current = [groupList objectAtIndex:indexPath.row];
+    [global getDiscussionsInGroup:current.handle withCallback:^(NSDictionary *results) {
+        
+        DicussionViewController *view = [self.storyboard instantiateViewControllerWithIdentifier:@"discussionView"];
+        view.dataSource = [results objectForKey:@"feed"];
+        [self.navigationController pushViewController:view animated:true];
+ 
+    }];
+   }
 
 
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if ([segue.identifier isEqualToString:@"showGroupDetail"]) {
+    if ([segue.identifier isEqualToString:@"showGroupDiscussions"]) {
         GroupDetailViewController *destViewController = segue.destinationViewController;
         NSIndexPath *indexPath = nil;
         

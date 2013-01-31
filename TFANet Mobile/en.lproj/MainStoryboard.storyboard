@@ -241,7 +241,7 @@
                         <rect key="frame" x="0.0" y="20" width="768" height="1004"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" allowsSelection="NO" rowHeight="140" sectionHeaderHeight="10" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="qL6-54-Vy5">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" rowHeight="140" sectionHeaderHeight="10" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="qL6-54-Vy5">
                                 <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <searchBar key="tableHeaderView" contentMode="redraw" id="2rD-AH-lXl">
@@ -253,7 +253,7 @@
                                     </connections>
                                 </searchBar>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" shouldIndentWhileEditing="NO" reuseIdentifier="GroupCell" rowHeight="138" id="llD-V4-666" customClass="GroupCell">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="gray" accessoryType="disclosureIndicator" indentationWidth="10" shouldIndentWhileEditing="NO" reuseIdentifier="GroupCell" rowHeight="138" id="llD-V4-666" customClass="GroupCell">
                                         <rect key="frame" x="0.0" y="78" width="768" height="139"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -304,7 +304,7 @@
                         <rect key="frame" x="0.0" y="20" width="768" height="1004"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" allowsSelection="NO" rowHeight="140" sectionHeaderHeight="10" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="6h0-I6-NWa">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" rowHeight="140" sectionHeaderHeight="10" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="6h0-I6-NWa">
                                 <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="768" id="HiF-Ra-Z8I"/>
@@ -319,7 +319,7 @@
                                     </connections>
                                 </searchBar>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" shouldIndentWhileEditing="NO" reuseIdentifier="GroupCell" rowHeight="138" id="B3y-py-UAv" customClass="GroupCell">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="gray" accessoryType="disclosureIndicator" indentationWidth="10" shouldIndentWhileEditing="NO" reuseIdentifier="GroupCell" rowHeight="138" id="B3y-py-UAv" customClass="GroupCell">
                                         <rect key="frame" x="0.0" y="78" width="768" height="139"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -399,33 +399,44 @@
             </objects>
             <point key="canvasLocation" x="1817" y="375"/>
         </scene>
-        <!--Group Detail View Controller-->
+        <!--Dicussion View Controller-->
         <scene sceneID="EWa-1C-LDs">
             <objects>
-                <viewController id="FYN-k8-dRF" customClass="GroupDetailViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="discussionView" id="FYN-k8-dRF" customClass="DicussionViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vXe-d8-xIy">
                         <rect key="frame" x="0.0" y="20" width="768" height="1004"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IO3-OP-NXy">
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="168" id="2AC-iB-SON"/>
-                                    <constraint firstAttribute="height" constant="102" id="59U-iA-WuW"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="120" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="GkQ-gb-QEg">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" reuseIdentifier="discussionCell" rowHeight="120" id="gG3-p7-1Qq" customClass="DiscussionCell">
+                                        <rect key="frame" x="0.0" y="22" width="768" height="120"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="768" height="119"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="FYN-k8-dRF" id="aTa-Ek-PdY"/>
+                                    <outlet property="delegate" destination="FYN-k8-dRF" id="rhh-uD-kAw"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="IO3-OP-NXy" firstAttribute="top" secondItem="vXe-d8-xIy" secondAttribute="top" constant="384" id="U3W-wf-DYn"/>
-                            <constraint firstItem="IO3-OP-NXy" firstAttribute="leading" secondItem="vXe-d8-xIy" secondAttribute="leading" constant="377" id="aMp-Ed-zMt"/>
+                            <constraint firstItem="GkQ-gb-QEg" firstAttribute="leading" secondItem="vXe-d8-xIy" secondAttribute="leading" type="default" id="H4S-wN-TFc"/>
+                            <constraint firstItem="GkQ-gb-QEg" firstAttribute="top" secondItem="vXe-d8-xIy" secondAttribute="top" type="default" id="M60-iw-Xe1"/>
+                            <constraint firstItem="GkQ-gb-QEg" firstAttribute="bottom" secondItem="vXe-d8-xIy" secondAttribute="bottom" type="default" id="THZ-1U-PIz"/>
+                            <constraint firstItem="GkQ-gb-QEg" firstAttribute="trailing" secondItem="vXe-d8-xIy" secondAttribute="trailing" type="default" id="ooN-Dl-ArF"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="xYz-5y-uZU"/>
                     <connections>
-                        <outlet property="groupLabel" destination="IO3-OP-NXy" id="9Lg-2I-fTc"/>
+                        <outlet property="discTable" destination="GkQ-gb-QEg" id="AbM-lU-Z1v"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FuD-dD-DqR" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -464,6 +475,67 @@
         <image name="profile.png" width="1032" height="617"/>
         <image name="region_btn.png" width="1032" height="314"/>
     </resources>
+    <classes>
+        <class className="DicussionViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/DicussionViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="discTable" candidateClass="UITableView"/>
+            </relationships>
+        </class>
+        <class className="DiscussionCell" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/DiscussionCell.h"/>
+            <relationships>
+                <relationship kind="outlet" name="author" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="discussionSummary" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="discussionTitle" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="icon" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="threadCount" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="updated" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="GroupCell" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/GroupCell.h"/>
+            <relationships>
+                <relationship kind="outlet" name="groupID" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="groupSummary" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="groupTitle" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="icon" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="membercount" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="updated" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="GroupSearchViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/GroupSearchViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="groupTableView" candidateClass="UITableView"/>
+            </relationships>
+        </class>
+        <class className="LogInViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/LogInViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="openBlogs:"/>
+                <relationship kind="action" name="openComingSoon:"/>
+                <relationship kind="action" name="openGroups:"/>
+                <relationship kind="action" name="openMyGroups:"/>
+            </relationships>
+        </class>
+        <class className="MyGroupsViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MyGroupsViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="groupTableView" candidateClass="UITableView"/>
+            </relationships>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="TFANetAppViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/TFANetAppViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="_password" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="_username" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackTranslucent"/>
         <simulatedOrientationMetrics key="orientation"/>

@@ -23,6 +23,7 @@ typedef void (^TFANetResponseBlock)(NSDictionary*);
 -(void) getAllGroupsWithCompletionBlock:(TFANetResponseBlock)callback;
 -(void) getMyGroupsWithCompletionBlock:(TFANetResponseBlock)callback;
 -(void) getMoreGroupsWithCompletionBlock:(TFANetResponseBlock)callback for:(NSNumber *) page andSize:(NSNumber*)step;
+-(void) getDiscussionsInGroup:(NSString*)handle withCallback:(TFANetResponseBlock) callback;
 -(bool) prefsSaved;
 -(NSString *)loadUsername;
 -(NSString *) loadPassword;
