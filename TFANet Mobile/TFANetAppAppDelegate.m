@@ -141,9 +141,10 @@ NSUserDefaults *prefs;
         
     }];
     
-    
-    // /lcapi/community/communities?ps=10&page=1&sortby=1&orderby=1&tag=&search=Search+for+a+Group&include=all
 }
+
+
+
 -(void) loginTFANet:(NSString*) user with: (NSString*) pwd usingCompleteCallbacK:(TFANetResponseBlock) callback{
     NSMutableDictionary *dict = [[NSMutableDictionary alloc] init];
     [dict setValue:user forKey:@"j_username"];

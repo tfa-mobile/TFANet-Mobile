@@ -59,7 +59,9 @@ NSMutableArray *discussionList;
     cell.threadCount.text = current.threadCount;
     cell.discussionSummary.text = current.summary;
     cell.discussionTitle.text = current.title;
-
+    cell.icon.image = [[UIImage alloc] initWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:
+                    [NSString stringWithFormat:@"http://dev.tfanet.org/profiles/photo.do?email=%@",current.author.email]]]];
+    cell.updated.text = current.updated;
     return cell;
 }
 
