@@ -23,7 +23,7 @@
                                           httpMethod:verb];
     
     [op addCompletionHandler:^(MKNetworkOperation *completedOperation) {
-
+        NSLog(@"URL: %@", completedOperation.url);
         NSError *error;
          // the completionBlock will be called twice.
          // if you are interested only in new values, move that code within the else block

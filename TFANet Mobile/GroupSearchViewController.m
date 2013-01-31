@@ -33,12 +33,6 @@
     self.groupList = [[NSMutableArray alloc] init];
     NSString *myIdentifier = @"GroupCell";
     [self.groupTableView registerNib:[UINib nibWithNibName:@"AllGroupCellView" bundle:nil] forCellReuseIdentifier:myIdentifier];
-    UIBarButtonItem *allGroups = [[UIBarButtonItem alloc]
-                                  initWithTitle:@"Search Groups"
-                                  style:UIBarButtonItemStyleBordered
-                                  target:self
-                                  action:@selector(groupView)];
-    self.navigationItem.rightBarButtonItem = allGroups;
     self.navigationItem.title = @"All Groups";
     [self populateTable];
     
@@ -56,10 +50,7 @@
 }
 -(void) addToDataSource{
     start = [NSNumber numberWithInt:start.intValue + 1];
-//    NSLog(@"Getting Page: %d", start.intValue);
-//     NSLog(@"Total Items: %d", totalResults.intValue);
-//     NSLog(@"With Page Size: %d", step.intValue);
-    if(!totalResults.intValue < (step.intValue * start.intValue)){
+    if(!(totalResults.intValue < (step.intValue * start.intValue))){
         [global getMoreGroupsWithCompletionBlock:^(NSDictionary *results) {
             [self parseJSON:results];
         } for: start andSize:step];
@@ -73,6 +64,7 @@
     //NSLog(@"result keys: %@", results.allKeys);
     NSDictionary* feed = [results objectForKey:@"feed"];
     //NSLog(@"keys in entry: %@", feed.allKeys);
+    
     if(!set){
     start = (NSNumber*)[feed objectForKey:@"startIndex"];
     step =  (NSNumber*)[feed objectForKey:@"itemsPerPage"];
