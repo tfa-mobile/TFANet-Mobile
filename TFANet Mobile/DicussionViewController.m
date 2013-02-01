@@ -55,13 +55,13 @@ NSMutableArray *discussionList;
     
     DiscussionCell *cell = (DiscussionCell *)[tableView dequeueReusableCellWithIdentifier:discussionIdentifier];
     
-    cell.author.text = current.author.name;
-    cell.threadCount.text = current.threadCount;
+    cell.author.text = [NSString stringWithFormat:@"Posted By: %@", current.author.name];
+    cell.threadCount.text = [NSString stringWithFormat:@" %@ Replies", current.threadCount];
     cell.discussionSummary.text = current.summary;
     cell.discussionTitle.text = current.title;
     cell.icon.image = [[UIImage alloc] initWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:
                     [NSString stringWithFormat:@"http://dev.tfanet.org/profiles/photo.do?email=%@",current.author.email]]]];
-    cell.updated.text = current.updated;
+    cell.updated.text = [NSString stringWithFormat:@"Last Updated: %@", current.updated];
     return cell;
 }
 
@@ -69,4 +69,8 @@ NSMutableArray *discussionList;
 {        return [discussionList count];
 }
 
+- (void) viewWillDisappear:(BOOL)animated {
+    [self.discTable deselectRowAtIndexPath:[self.discTable indexPathForSelectedRow] animated:animated];
+    [super viewWillDisappear:animated];
+}
 @end

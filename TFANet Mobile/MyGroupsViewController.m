@@ -161,6 +161,11 @@
     return YES;
 }
 
+- (void) viewWillDisappear:(BOOL)animated {
+    [self.groupTableView deselectRowAtIndexPath:[self.groupTableView indexPathForSelectedRow] animated:animated];
+    [super viewWillDisappear:animated];
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];

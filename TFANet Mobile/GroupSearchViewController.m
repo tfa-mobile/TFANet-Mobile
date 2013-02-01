@@ -158,4 +158,9 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void) viewWillDisappear:(BOOL)animated {
+    [self.groupTableView deselectRowAtIndexPath:[self.groupTableView indexPathForSelectedRow] animated:animated];
+    [super viewWillDisappear:animated];
+}
+
 @end
