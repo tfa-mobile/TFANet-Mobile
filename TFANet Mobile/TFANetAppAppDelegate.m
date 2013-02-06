@@ -78,10 +78,10 @@ NSUserDefaults *prefs;
             
             callback(body);
         }else{
-            NSLog(@"Empty body:");
+            //NSLog(@"Empty body:");
         }
     }  onError:^(NSError *error){
-        NSLog(@"error: %@",error);
+        //NSLog(@"error: %@",error);
         
     }];
     
@@ -94,10 +94,10 @@ NSUserDefaults *prefs;
             
             callback(body);
         }else{
-            NSLog(@"Empty body:");
+            //NSLog(@"Empty body:");
         }
     }  onError:^(NSError *error){
-        NSLog(@"error: %@",error);
+        //NSLog(@"error: %@",error);
         
     }];
 
@@ -110,13 +110,32 @@ NSUserDefaults *prefs;
             
             callback(body);
         }else{
-            NSLog(@"Empty body:");
+            //NSLog(@"Empty body:");
         }
     }  onError:^(NSError *error){
-        NSLog(@"error: %@",error);
+        //NSLog(@"error: %@",error);
         
     }];
     
+}
+
+-(void) getBlogDetailsWithCompleteCallback:(TFANetResponseBlock) callback forBlog:(NSString *)blog andID:(NSString*)blogID{
+    
+    NSString *url = [NSString stringWithFormat:@"lcapi/blogs/%@/%@?type=6&ps=500", blog, blogID];
+    
+    [self.authEngine bodyForPath:url verb:@"GET" body:nil isCacheable:FALSE onCompletion:^(NSDictionary *body) {
+        if([body count] >0){
+            
+            callback(body);
+        }else{
+            //NSLog(@"Empty body:");
+        }
+    }  onError:^(NSError *error){
+        //NSLog(@"error: %@",error);
+        
+    }];
+
+
 }
 
 -(void) getMoreGroupsWithCompletionBlock:(TFANetResponseBlock)callback for:(NSNumber*) page andSize:(NSNumber*)step{
@@ -134,10 +153,10 @@ NSUserDefaults *prefs;
             
             callback(body);
         }else{
-            NSLog(@"Empty body:");
+            //NSLog(@"Empty body:");
         }
     }  onError:^(NSError *error){
-        NSLog(@"error: %@",error);
+        //NSLog(@"error: %@",error);
         
     }];
     
@@ -158,11 +177,11 @@ NSUserDefaults *prefs;
            }];
         }
         else{
-            NSLog(@"Got the form back.");
-            NSLog(@"body: %@", body);
+            //NSLog(@"Got the form back.");
+            //NSLog(@"body: %@", body);
         }
     } onError:^(NSError *error) {
-        NSLog(@"error: %@", error);
+        //NSLog(@"error: %@", error);
     }];
 }
 
@@ -171,7 +190,7 @@ NSUserDefaults *prefs;
     [self.authEngine bodyForPath:@"mobileauth/authn" verb:@"GET" body:nil isCacheable:NO onCompletion:^(NSDictionary *body) {
         callback(body);
     } onError:^(NSError *error) {
-        NSLog(@"error");
+        //NSLog(@"error");
         
     }];
 

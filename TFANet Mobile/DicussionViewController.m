@@ -8,13 +8,17 @@
 
 #import "DicussionViewController.h"
 #import "DiscussionCell.h"
+#import "Thread.h"
+#import "ThreadViewController.h"
+
 @interface DicussionViewController ()
 
 @end
 
 @implementation DicussionViewController
+
 NSMutableArray *discussionList;
-@synthesize discTable, dataSource, data, start, step, totalResults, set;
+@synthesize discTable, dataSource, data, start, step, totalResults, set, global, blog;
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -38,6 +42,8 @@ NSMutableArray *discussionList;
     for (NSDictionary *dic in data) {
     [discussionList addObject:[Discussion discussionWithDictionary:dic]];
     }
+    
+    global = [[UIApplication sharedApplication] delegate];
 
 }
 
@@ -66,11 +72,27 @@ NSMutableArray *discussionList;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{        return [discussionList count];
+{
+    
+    return [discussionList count];
+    
 }
 
 - (void) viewWillDisappear:(BOOL)animated {
     [self.discTable deselectRowAtIndexPath:[self.discTable indexPathForSelectedRow] animated:animated];
     [super viewWillDisappear:animated];
+}
+
+-(void) tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath{
+
+    [global getBlogDetailsWithCompleteCallback:^(NSDictionary *results) {
+        Thread *thread = [Thread threadFromDictionary:[results valueForKey:@"feed"]];
+        ThreadViewController *tvc = [self.storyboard instantiateViewControllerWithIdentifier:@"threadView"];
+        tvc.thread = thread;
+        [self.navigationController pushViewController:tvc animated:true];
+        NSLog(@"got thread details!");
+
+    } forBlog:self.blog andID:[[discussionList objectAtIndex:indexPath.row] ID]];
+
 }
 @end

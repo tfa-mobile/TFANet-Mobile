@@ -25,6 +25,7 @@ typedef void (^TFANetResponseBlock)(NSDictionary*);
 -(void) getMoreGroupsWithCompletionBlock:(TFANetResponseBlock)callback for:(NSNumber *) page andSize:(NSNumber*)step;
 -(void) getDiscussionsInGroup:(NSString*)handle withCallback:(TFANetResponseBlock) callback;
 -(bool) prefsSaved;
+-(void) getBlogDetailsWithCompleteCallback:(TFANetResponseBlock) callback forBlog:(NSString *)blog andID:(NSString*)blogID;
 -(NSString *)loadUsername;
 -(NSString *) loadPassword;
 -(void) storePrefs:(NSString *)username with:(NSString*)pwd;

@@ -30,6 +30,9 @@
 		AD06F60216BC0D7000091D86 /* Discussion.m in Sources */ = {isa = PBXBuildFile; fileRef = AD06F5FB16BC0D7000091D86 /* Discussion.m */; };
 		AD06F60316BC0D7000091D86 /* Author.m in Sources */ = {isa = PBXBuildFile; fileRef = AD06F5FE16BC0D7000091D86 /* Author.m */; };
 		AD06F60416BC0D7000091D86 /* DateStamp.m in Sources */ = {isa = PBXBuildFile; fileRef = AD06F5FF16BC0D7000091D86 /* DateStamp.m */; };
+		AD06F60616BC3F1D00091D86 /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = AD06F60516BC3F1D00091D86 /* Icon-72.png */; };
+		AD06F60816BC3F2600091D86 /* Icon-72@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AD06F60716BC3F2600091D86 /* Icon-72@2x.png */; };
+		AD06F60A16BC3F3400091D86 /* Default-Portrait~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = AD06F60916BC3F3300091D86 /* Default-Portrait~ipad.png */; };
 		AD13C59316B8584100B5CF5C /* MyGroupsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD13C58D16B8584100B5CF5C /* MyGroupsViewController.m */; };
 		AD13C59416B8584100B5CF5C /* GroupCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AD13C59016B8584100B5CF5C /* GroupCell.m */; };
 		AD13C59516B8584100B5CF5C /* GroupDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD13C59116B8584100B5CF5C /* GroupDetailViewController.m */; };
@@ -46,6 +49,10 @@
 		AD13C6D716B9A80400B5CF5C /* news_btn.png in Resources */ = {isa = PBXBuildFile; fileRef = AD13C6D016B9A80400B5CF5C /* news_btn.png */; };
 		AD13C6D816B9A80400B5CF5C /* region_btn.png in Resources */ = {isa = PBXBuildFile; fileRef = AD13C6D116B9A80400B5CF5C /* region_btn.png */; };
 		AD13C6D916B9A80400B5CF5C /* menu.png in Resources */ = {isa = PBXBuildFile; fileRef = AD13C6D216B9A80400B5CF5C /* menu.png */; };
+		AD50C33116BC60CD00EAD6FF /* Thread.m in Sources */ = {isa = PBXBuildFile; fileRef = AD50C33016BC60CD00EAD6FF /* Thread.m */; };
+		AD50C33D16C191FD00EAD6FF /* ThreadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD50C33C16C191FD00EAD6FF /* ThreadViewController.m */; };
+		AD50C33F16C2DF0900EAD6FF /* ThreadView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD50C33E16C2DF0900EAD6FF /* ThreadView.xib */; };
+		AD50C34416C2DF5300EAD6FF /* ThreadCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AD50C34316C2DF5300EAD6FF /* ThreadCell.m */; };
 		ADE062431680F9A400A0F7BF /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADE062421680F9A400A0F7BF /* CFNetwork.framework */; };
 		ADE062451680F9A900A0F7BF /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADE062441680F9A900A0F7BF /* Security.framework */; };
 		ADE062471680F9B900A0F7BF /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADE062461680F9B900A0F7BF /* SystemConfiguration.framework */; };
@@ -106,6 +113,9 @@
 		AD06F5FE16BC0D7000091D86 /* Author.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Author.m; path = "TFANet Mobile/Author.m"; sourceTree = "<group>"; };
 		AD06F5FF16BC0D7000091D86 /* DateStamp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DateStamp.m; path = "TFANet Mobile/DateStamp.m"; sourceTree = "<group>"; };
 		AD06F60016BC0D7000091D86 /* DateStamp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DateStamp.h; path = "TFANet Mobile/DateStamp.h"; sourceTree = "<group>"; };
+		AD06F60516BC3F1D00091D86 /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72.png"; sourceTree = "<group>"; };
+		AD06F60716BC3F2600091D86 /* Icon-72@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72@2x.png"; sourceTree = "<group>"; };
+		AD06F60916BC3F3300091D86 /* Default-Portrait~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Portrait~ipad.png"; sourceTree = "<group>"; };
 		AD13C58D16B8584100B5CF5C /* MyGroupsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyGroupsViewController.m; path = "TFANet Mobile/MyGroupsViewController.m"; sourceTree = "<group>"; };
 		AD13C58E16B8584100B5CF5C /* GroupDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GroupDetailViewController.h; path = "TFANet Mobile/GroupDetailViewController.h"; sourceTree = "<group>"; };
 		AD13C58F16B8584100B5CF5C /* GroupCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GroupCell.h; path = "TFANet Mobile/GroupCell.h"; sourceTree = "<group>"; };
@@ -126,6 +136,13 @@
 		AD13C6D016B9A80400B5CF5C /* news_btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = news_btn.png; path = "TFANet Mobile/news_btn.png"; sourceTree = "<group>"; };
 		AD13C6D116B9A80400B5CF5C /* region_btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = region_btn.png; path = "TFANet Mobile/region_btn.png"; sourceTree = "<group>"; };
 		AD13C6D216B9A80400B5CF5C /* menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = menu.png; path = "TFANet Mobile/menu.png"; sourceTree = "<group>"; };
+		AD50C32F16BC60CD00EAD6FF /* Thread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Thread.h; sourceTree = "<group>"; };
+		AD50C33016BC60CD00EAD6FF /* Thread.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Thread.m; sourceTree = "<group>"; };
+		AD50C33B16C191FD00EAD6FF /* ThreadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ThreadViewController.h; path = "TFANet Mobile/ThreadViewController.h"; sourceTree = "<group>"; };
+		AD50C33C16C191FD00EAD6FF /* ThreadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ThreadViewController.m; path = "TFANet Mobile/ThreadViewController.m"; sourceTree = "<group>"; };
+		AD50C33E16C2DF0900EAD6FF /* ThreadView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ThreadView.xib; path = "TFANet Mobile/ThreadView.xib"; sourceTree = "<group>"; };
+		AD50C34216C2DF4300EAD6FF /* ThreadCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ThreadCell.h; path = "TFANet Mobile/ThreadCell.h"; sourceTree = "<group>"; };
+		AD50C34316C2DF5300EAD6FF /* ThreadCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ThreadCell.m; path = "TFANet Mobile/ThreadCell.m"; sourceTree = "<group>"; };
 		ADE062421680F9A400A0F7BF /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		ADE062441680F9A900A0F7BF /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		ADE062461680F9B900A0F7BF /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
@@ -157,6 +174,9 @@
 		99B5FF2E1671235F00AE6179 = {
 			isa = PBXGroup;
 			children = (
+				AD06F60916BC3F3300091D86 /* Default-Portrait~ipad.png */,
+				AD06F60716BC3F2600091D86 /* Icon-72@2x.png */,
+				AD06F60516BC3F1D00091D86 /* Icon-72.png */,
 				ADE0628C1680FEFB00A0F7BF /* MKNetworkKit-iOS.xcodeproj */,
 				99B5FF431671235F00AE6179 /* TFANet Mobile */,
 				99B5FF3C1671235F00AE6179 /* Frameworks */,
@@ -224,13 +244,20 @@
 			children = (
 				AD06F5F916BC0D7000091D86 /* DiscussionCell.h */,
 				AD06F5FA16BC0D7000091D86 /* DiscussionCell.m */,
+				AD06F5FD16BC0D7000091D86 /* Discussion.h */,
 				AD06F5FB16BC0D7000091D86 /* Discussion.m */,
 				AD06F5FC16BC0D7000091D86 /* Author.h */,
-				AD06F5FD16BC0D7000091D86 /* Discussion.h */,
 				AD06F5FE16BC0D7000091D86 /* Author.m */,
 				AD06F5D816BAFBEE00091D86 /* DiscussionView.xib */,
 				AD06F5CF16BAF51B00091D86 /* DicussionViewController.h */,
 				AD06F5D016BAF51B00091D86 /* DicussionViewController.m */,
+				AD50C32F16BC60CD00EAD6FF /* Thread.h */,
+				AD50C33016BC60CD00EAD6FF /* Thread.m */,
+				AD50C34216C2DF4300EAD6FF /* ThreadCell.h */,
+				AD50C34316C2DF5300EAD6FF /* ThreadCell.m */,
+				AD50C33E16C2DF0900EAD6FF /* ThreadView.xib */,
+				AD50C33B16C191FD00EAD6FF /* ThreadViewController.h */,
+				AD50C33C16C191FD00EAD6FF /* ThreadViewController.m */,
 			);
 			name = Discussion;
 			sourceTree = "<group>";
@@ -380,6 +407,10 @@
 				2643FED116B9BBCC00459864 /* bg_color.png in Resources */,
 				2643FEDA16B9D7DC00459864 /* AllGroupCellView.xib  in Resources */,
 				AD06F5D916BAFBEE00091D86 /* DiscussionView.xib in Resources */,
+				AD06F60616BC3F1D00091D86 /* Icon-72.png in Resources */,
+				AD06F60816BC3F2600091D86 /* Icon-72@2x.png in Resources */,
+				AD06F60A16BC3F3400091D86 /* Default-Portrait~ipad.png in Resources */,
+				AD50C33F16C2DF0900EAD6FF /* ThreadView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -405,6 +436,9 @@
 				AD06F60216BC0D7000091D86 /* Discussion.m in Sources */,
 				AD06F60316BC0D7000091D86 /* Author.m in Sources */,
 				AD06F60416BC0D7000091D86 /* DateStamp.m in Sources */,
+				AD50C33116BC60CD00EAD6FF /* Thread.m in Sources */,
+				AD50C33D16C191FD00EAD6FF /* ThreadViewController.m in Sources */,
+				AD50C34416C2DF5300EAD6FF /* ThreadCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -119,6 +119,7 @@
         
         DicussionViewController *view = [self.storyboard instantiateViewControllerWithIdentifier:@"discussionView"];
         view.dataSource = [results objectForKey:@"feed"];
+        view.blog = current.handle;
         [self.navigationController pushViewController:view animated:true];
  
     }];
