@@ -10,12 +10,12 @@
 #import "TFANetAppAppDelegate.h"
 #import "Thread.h"
 
-@interface ThreadViewController : UIViewController
+@interface ThreadViewController : UIViewController<UITableViewDelegate, UITableViewDataSource>
 
 
 @property(nonatomic, retain) IBOutlet UITableView *threadTable;
-@property(nonatomic, retain) IBOutlet UITextView *content;
-@property(nonatomic, retain) IBOutlet UILabel *author, *date, *post;
+@property(nonatomic, retain) IBOutlet UITextView *post;
+@property(nonatomic, retain) IBOutlet UILabel *author, *date;
 @property(nonatomic, retain) IBOutlet UIImageView *pic;
 @property(nonatomic, retain) Thread *thread;
 @property (nonatomic, retain) TFANetAppAppDelegate *global;

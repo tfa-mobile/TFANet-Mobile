@@ -54,7 +54,7 @@ NSMutableArray *comments;
     static NSString *cellIdentifier = @"threadCell";
     
     ThreadCell *cell = (ThreadCell *)[self.threadTable dequeueReusableCellWithIdentifier:cellIdentifier];
-    
+    cell.threadSummary.text = current;
    
     return cell;
 }
